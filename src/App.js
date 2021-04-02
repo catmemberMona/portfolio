@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Avatar, Typography, Box } from '@material-ui/core';
+import { Grid, makeStyles, Avatar, Typography, Box, Container } from '@material-ui/core';
 // import { mona, linkedin, github } from './Images'
 import mona from './Images/mona.jpeg';
 import linkedin from './Images/linkedin.png';
@@ -37,7 +37,7 @@ function App() {
       </div>
       {/* Mona Name and Image first Look Section */}
       <div>
-        <div>
+        <Container>
           <Typography
             variant='h2'
             align='center'
@@ -45,19 +45,20 @@ function App() {
           >
             Mona Zheng
           </Typography>
-        </div>
-        <div>
-          <Avatar alt='Mona' src={mona} className={classes.medium} />
-        </div>
+        </Container>
+        <Container>
+          <Avatar
+            alt='Mona'
+            src={mona}
+            variant='square'
+            className={classes.extraLarge}
+          />
+        </Container>
       </div>
       {/* About Mona Section */}
       <div className={classes.aboutMe}>
         <Box>
-          <Typography
-            variant='h2'
-            align='center'
-            className={classes.topSpacing}
-          >
+          <Typography variant='h4' className={classes.topSpacing}>
             About Mona
           </Typography>
         </Box>
@@ -115,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
     // padding: '.5em'
   },
   externalLinks: {
-    display: "flex",
+    display: 'flex',
     flexDirection: 'row',
     flex: 1,
     alignItems: 'center',
@@ -132,7 +133,7 @@ const useStyles = makeStyles((theme) => ({
   small: {
     width: theme.spacing(6),
     height: theme.spacing(6),
-    margin: '2px 10px',
+    margin: '1px 1px',
   },
   medium: {
     width: theme.spacing(24),
@@ -143,6 +144,11 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(34),
     marginTop: theme.spacing(2),
     border: '1px purple solid',
+  },
+  extraLarge: {
+    marginTop: theme.spacing(2),
+    width: '100%',
+    height: 600,
   },
 }));
 
