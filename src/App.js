@@ -57,12 +57,12 @@ function App() {
       </div>
       {/* About Mona Section */}
       <div className={classes.aboutMe}>
-        <Box>
+        <Container>
           <Typography variant='h4' className={classes.topSpacing}>
             About Mona
           </Typography>
-        </Box>
-        <Box>
+        </Container>
+        <Container>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -76,30 +76,32 @@ function App() {
             eiusmod tempor i exercitation ullamco laboris nisi ut aliquip ex ea
             commodoum.
           </p>
-        </Box>
+        </Container>
         {/* External Links  */}
-        <Grid container xs={4} lg={2} className={classes.externalLinks}>
-          <Grid item className={classes.avatarLink}>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://github.com/catmemberMona'
-            >
-              <Avatar alt='github' src={github} className={classes.small} />
-            </a>
+        <Container>
+          <Grid container xs={4} lg={2} className={classes.externalLinks}>
+            <Grid item className={classes.avatarLink}>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://github.com/catmemberMona'
+              >
+                <Avatar alt='github' src={github} className={classes.small} />
+              </a>
+            </Grid>
+            <Grid item className={classes.avatarLink}>
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href='https://www.linkedin.com/in/mona-a-zheng/'
+              >
+                <Avatar alt='linkedin' src={linkedin} className={classes.small}>
+                  L
+                </Avatar>
+              </a>
+            </Grid>
           </Grid>
-          <Grid item className={classes.avatarLink}>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.linkedin.com/in/mona-a-zheng/'
-            >
-              <Avatar alt='linkedin' src={linkedin} className={classes.small}>
-                L
-              </Avatar>
-            </a>
-          </Grid>
-        </Grid>
+        </Container>
       </div>
     </div>
   );
