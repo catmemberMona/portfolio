@@ -11,19 +11,24 @@ function App() {
     <div className={classes.root}>
       {/* Navigation Section  */}
       <div>
-        <Grid container>
+        <Grid
+          container
+          xs={12}
+          direction='row'
+          // alignItems='center'
+        >
           {/* ICON of me */}
-          <Grid item>
+          <Grid item xs={2} lg={1}>
             <Avatar>Mona</Avatar>
           </Grid>
           {/* List of project links  */}
-          <Grid container>
+          <Grid container item xs={8} lg={8}>
             <Grid item>Link One</Grid>
             <Grid item>Link Two</Grid>
             <Grid item>Link Three</Grid>
           </Grid>
           {/* List of external links, linkedin etc  */}
-          <Grid container>
+          <Grid container item xs={2} lg={3}>
             <Grid item>Link One</Grid>
             <Grid item>Link Two</Grid>
             <Grid item>Link Three</Grid>
@@ -72,16 +77,28 @@ function App() {
           </p>
         </Box>
         {/* External Links  */}
-        <Box>
-          <a target='github' href='https://github.com/catmemberMona'>
-            <Avatar alt='github' src={github} className={classes.small} />
-          </a>
-          <a target='linkedin' href='https://www.linkedin.com/in/mona-a-zheng/'>
-            <Avatar alt='linkedin' src={linkedin} className={classes.small}>
-              L
-            </Avatar>
-          </a>
-        </Box>
+        <Grid container xs={4} lg={2} className={classes.externalLinks}>
+          <Grid item className={classes.avatarLink}>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://github.com/catmemberMona'
+            >
+              <Avatar alt='github' src={github} className={classes.small} />
+            </a>
+          </Grid>
+          <Grid item className={classes.avatarLink}>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.linkedin.com/in/mona-a-zheng/'
+            >
+              <Avatar alt='linkedin' src={linkedin} className={classes.small}>
+                L
+              </Avatar>
+            </a>
+          </Grid>
+        </Grid>
       </div>
     </div>
   );
@@ -90,12 +107,21 @@ function App() {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    margin: '1em',
+    // margin: '1em',
   },
   aboutMe: {
     // backgroundColor: 'rgba(255, 209, 0, 1)',
     // border: '.2px solid rgba(255, 200, 0, .6)',
     // padding: '.5em'
+  },
+  externalLinks: {
+    display: "flex",
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: 'center',
+  },
+  avatarLink: {
+    flex: 1,
   },
   topSpacing: {
     marginTop: '1em',
