@@ -46,10 +46,12 @@ function App() {
               value={value}
               onChange={handleChange}
               aria-label='simple tabs example'
+              style={{ height: '3.5em' }}
             >
               <Tab
                 label={<Link className={classes.navInner}>Item One</Link>}
                 {...a11yProps(0)}
+                style={{padding: 20}}
               />
               <Tab
                 label={<Link className={classes.navInner}>Item Two</Link>}
@@ -148,12 +150,12 @@ const useStyles = makeStyles((theme) => ({
   },
   nav: {
     minHeight: 70,
-    height: '5em',
+    height: '6em',
     fontFamily: 'Roboto, sans-serif',
   },
   navInner: {
     height: '100%',
-    fontSize: '1.55em'
+    fontSize: '1.55em',
   },
   aboutMe: {
     // backgroundColor: 'rgba(255, 209, 0, 1)',
