@@ -47,11 +47,14 @@ function App() {
               onChange={handleChange}
               aria-label='simple tabs example'
               style={{ height: '3.5em' }}
+              TabIndicatorProps={{
+                style: { height: '8px', backgroundColor: '#DC143C' },
+              }}
             >
               <Tab
                 label={<Link className={classes.navInner}>Item One</Link>}
                 {...a11yProps(0)}
-                style={{padding: 20}}
+                style={{ padding: 20 }}
               />
               <Tab
                 label={<Link className={classes.navInner}>Item Two</Link>}
