@@ -1,34 +1,68 @@
-import { Grid, makeStyles, Avatar, Typography, Box, Container } from '@material-ui/core';
+import React from 'react'
+import { Grid, makeStyles, Avatar, Typography, Box, Container, Tabs, Tab, Link } from '@material-ui/core';
 // import { mona, linkedin, github } from './Images'
 import mona from './Images/mona.jpeg';
 import linkedin from './Images/linkedin.png';
 import github from './Images/github.png';
 
+
+
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+
+
 function App() {
   const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <div className={classes.root}>
       {/* Navigation Section  */}
-      <Container>
+      <Container className={classes.nav} variant='h1'>
         <Grid
           container
           xs={12}
           direction='row'
-          // alignItems='center'
+          className={classes.navInner}
+          alignItems='center'
         >
           {/* ICON of me */}
-          <Grid item xs={2} lg={1}>
+          <Grid item xs={1} lg={1}>
             <Avatar>Mona</Avatar>
           </Grid>
           {/* List of project links  */}
           <Grid container item xs={8} lg={8}>
-            <Grid item>Link One</Grid>
-            <Grid item>Link Two</Grid>
-            <Grid item>Link Three</Grid>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label='simple tabs example'
+            >
+              <Tab
+                label={<Link className={classes.navInner}>Item One</Link>}
+                {...a11yProps(0)}
+              />
+              <Tab
+                label={<Link className={classes.navInner}>Item Two</Link>}
+                {...a11yProps(1)}
+              />
+              <Tab
+                label={<Link className={classes.navInner}>Item Three</Link>}
+                {...a11yProps(2)}
+              />
+            </Tabs>
           </Grid>
           {/* List of external links, linkedin etc  */}
-          <Grid container item xs={2} lg={3}>
+          <Grid container item xs={3} lg={3}>
             <Grid item>Link One</Grid>
             <Grid item>Link Two</Grid>
             <Grid item>Link Three</Grid>
@@ -111,6 +145,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     // margin: '1em',
+  },
+  nav: {
+    minHeight: 70,
+    height: '5em',
+    fontFamily: 'Roboto, sans-serif',
+  },
+  navInner: {
+    height: '100%',
+    fontSize: '1.55em'
   },
   aboutMe: {
     // backgroundColor: 'rgba(255, 209, 0, 1)',
