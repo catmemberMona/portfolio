@@ -10,7 +10,7 @@ function App() {
   return (
     <div className={classes.root}>
       {/* Navigation Section  */}
-      <div>
+      <Container>
         <Grid
           container
           xs={12}
@@ -34,7 +34,7 @@ function App() {
             <Grid item>Link Three</Grid>
           </Grid>
         </Grid>
-      </div>
+      </Container>
       {/* Mona Name and Image first Look Section */}
       <div>
         <Container>
