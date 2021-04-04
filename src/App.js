@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, makeStyles, Avatar, Typography, Box, Container, Tabs, Tab, Link } from '@material-ui/core';
+import { Grid, makeStyles, Avatar, Typography, Box, Container, Tabs, Tab, AppBar, Link } from '@material-ui/core';
 // import { mona, linkedin, github } from './Images'
 import mona from './Images/mona.jpeg';
 import linkedin from './Images/linkedin.png';
@@ -28,52 +28,60 @@ function App() {
   return (
     <div className={classes.root}>
       {/* Navigation Section  */}
-      <Container className={classes.nav} variant='h1'>
-        <Grid
-          container
-          xs={12}
-          direction='row'
-          className={classes.navInner}
-          alignItems='center'
-        >
-          {/* ICON of me */}
-          <Grid item xs={1} lg={1}>
-            <Avatar>Mona</Avatar>
+      <AppBar
+        position='sticky'
+        style={{
+          backgroundColor: 'white',
+          boxShadow: '0px 1px 8px rgb(221,221,221)',
+        }}
+      >
+        <Container className={classes.nav} variant='h1'>
+          <Grid
+            container
+            xs={12}
+            direction='row'
+            className={classes.navInner}
+            alignItems='center'
+          >
+            {/* ICON of me */}
+            <Grid item xs={1} lg={1}>
+              <Avatar>Mona</Avatar>
+            </Grid>
+            {/* List of project links  */}
+            <Grid container item xs={8} lg={8}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label='simple tabs example'
+                style={{ height: '3.5em' }}
+                TabIndicatorProps={{
+                  style: { height: '8px', backgroundColor: '#DC143C' },
+                }}
+              >
+                <Tab
+                  label={<Link className={classes.navInner}>Item One</Link>}
+                  {...a11yProps(0)}
+                  style={{ padding: 20 }}
+                />
+                <Tab
+                  label={<Link className={classes.navInner}>Item Two</Link>}
+                  {...a11yProps(1)}
+                />
+                <Tab
+                  label={<Link className={classes.navInner}>Item Three</Link>}
+                  {...a11yProps(2)}
+                />
+              </Tabs>
+            </Grid>
+            {/* List of external links, linkedin etc  */}
+            <Grid container item xs={3} lg={3}>
+              <Grid item>Link One</Grid>
+              <Grid item>Link Two</Grid>
+              <Grid item>Link Three</Grid>
+            </Grid>
           </Grid>
-          {/* List of project links  */}
-          <Grid container item xs={8} lg={8}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label='simple tabs example'
-              style={{ height: '3.5em' }}
-              TabIndicatorProps={{
-                style: { height: '8px', backgroundColor: '#DC143C' },
-              }}
-            >
-              <Tab
-                label={<Link className={classes.navInner}>Item One</Link>}
-                {...a11yProps(0)}
-                style={{ padding: 20 }}
-              />
-              <Tab
-                label={<Link className={classes.navInner}>Item Two</Link>}
-                {...a11yProps(1)}
-              />
-              <Tab
-                label={<Link className={classes.navInner}>Item Three</Link>}
-                {...a11yProps(2)}
-              />
-            </Tabs>
-          </Grid>
-          {/* List of external links, linkedin etc  */}
-          <Grid container item xs={3} lg={3}>
-            <Grid item>Link One</Grid>
-            <Grid item>Link Two</Grid>
-            <Grid item>Link Three</Grid>
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </AppBar>
       {/* Mona Name and Image first Look Section */}
       <div>
         <Container>
