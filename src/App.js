@@ -32,6 +32,7 @@ function App() {
         position='sticky'
         style={{
           backgroundColor: 'white',
+          color: 'black',
           boxShadow: '0px 1px 8px rgb(221,221,221)',
         }}
       >
@@ -42,6 +43,7 @@ function App() {
             direction='row'
             className={classes.navInner}
             alignItems='center'
+    
           >
             {/* ICON of me */}
             <Grid item xs={1} lg={1}>
@@ -53,7 +55,7 @@ function App() {
                 value={value}
                 onChange={handleChange}
                 aria-label='simple tabs example'
-                style={{ height: '3.5em' }}
+                style={{ height: '3em', paddingTop: '.9em' }}
                 TabIndicatorProps={{
                   style: { height: '8px', backgroundColor: '#DC143C' },
                 }}
@@ -167,6 +169,7 @@ const useStyles = makeStyles((theme) => ({
   navInner: {
     height: '100%',
     fontSize: '1.55em',
+    
   },
   aboutMe: {
     // backgroundColor: 'rgba(255, 209, 0, 1)',
