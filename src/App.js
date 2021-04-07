@@ -43,7 +43,6 @@ function App() {
             direction='row'
             className={classes.navInner}
             alignItems='center'
-    
           >
             {/* ICON of me */}
             <Grid item xs={1} lg={1}>
@@ -61,16 +60,28 @@ function App() {
                 }}
               >
                 <Tab
-                  label={<Link className={classes.navInner}>Item One</Link>}
+                  label={
+                    <Link className={classes.navInner} underline='none'>
+                      Item One
+                    </Link>
+                  }
                   {...a11yProps(0)}
                   style={{ padding: 20 }}
                 />
                 <Tab
-                  label={<Link className={classes.navInner}>Item Two</Link>}
+                  label={
+                    <Link className={classes.navInner} underline='none'>
+                      Item Two
+                    </Link>
+                  }
                   {...a11yProps(1)}
                 />
                 <Tab
-                  label={<Link className={classes.navInner}>Item Three</Link>}
+                  label={
+                    <Link className={classes.navInner} underline='none'>
+                      Item Three
+                    </Link>
+                  }
                   {...a11yProps(2)}
                 />
               </Tabs>
@@ -169,7 +180,9 @@ const useStyles = makeStyles((theme) => ({
   navInner: {
     height: '100%',
     fontSize: '1.55em',
-    
+    fontWeight: 500,
+    color: 'black',
+    textDecoration: 'none',
   },
   aboutMe: {
     // backgroundColor: 'rgba(255, 209, 0, 1)',
