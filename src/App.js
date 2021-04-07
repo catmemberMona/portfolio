@@ -46,10 +46,10 @@ function App() {
           >
             {/* ICON of me */}
             <Grid item xs={1} lg={1}>
-              <Avatar>Mona</Avatar>
+              <Avatar alt='Mona' src={mona} className={classes.medium} />
             </Grid>
             {/* List of project links  */}
-            <Grid container item xs={8} lg={8}>
+            <Grid container item xs={8} lg={9}>
               <Tabs
                 value={value}
                 onChange={handleChange}
@@ -87,10 +87,31 @@ function App() {
               </Tabs>
             </Grid>
             {/* List of external links, linkedin etc  */}
-            <Grid container item xs={3} lg={3}>
-              <Grid item>Link One</Grid>
-              <Grid item>Link Two</Grid>
-              <Grid item>Link Three</Grid>
+            <Grid container item xs={3} lg={2} align='right'>
+              <Grid item className={classes.avatarLink}>
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://github.com/catmemberMona'
+                >
+                  <Avatar alt='github' src={github} className={classes.small} />
+                </a>
+              </Grid>
+              <Grid item className={classes.avatarLink}>
+                <a
+                  target='_blank'
+                  rel='noreferrer'
+                  href='https://www.linkedin.com/in/mona-a-zheng/'
+                >
+                  <Avatar
+                    alt='linkedin'
+                    src={linkedin}
+                    className={classes.small}
+                  >
+                    L
+                  </Avatar>
+                </a>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
@@ -210,8 +231,9 @@ const useStyles = makeStyles((theme) => ({
     margin: '1px 1px',
   },
   medium: {
-    width: theme.spacing(24),
-    height: theme.spacing(24),
+    width: theme.spacing(8),
+    height: theme.spacing(8),
+    border: '.5px darkred solid'
   },
   large: {
     width: theme.spacing(34),
