@@ -153,7 +153,7 @@ function App() {
           </Typography>
         </Container>
         <Container maxWidth='false'>
-          <div style={{ maxWidth: 1800, margin: 'auto' }} className={classes.contentText}>
+          <div style={{ maxWidth: 1400, marginRight: 'auto' }} className={classes.contentText}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
