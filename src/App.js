@@ -47,7 +47,7 @@ function App() {
               alignItems='center'
             >
               {/* ICON of me */}
-              <Grid item xs={1} lg={1}>
+              <Grid item xs={2} lg={1}>
                 <Avatar alt='Mona' src={mona} className={classes.medium} />
               </Grid>
               {/* List of project links  */}
@@ -89,7 +89,7 @@ function App() {
                 </Tabs>
               </Grid>
               {/* List of external links, linkedin etc  */}
-              <Grid container item xs={3} lg={2} align='right'>
+              <Grid container item xs={2} lg={2} align='right'>
                 <Grid item className={classes.avatarLink}>
                   <a
                     target='_blank'
@@ -235,6 +235,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatarLink: {
     flex: 1,
+    marginTop: '1em'
   },
   topSpacing: {
     marginTop: '2em',
