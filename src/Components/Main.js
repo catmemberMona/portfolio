@@ -35,6 +35,7 @@ function Main(props) {
       <Me avatarImage={mona} />
       {/* About Mona Section */}
       <AboutMe avatarImages={{ mona, linkedin, github }} />
+      {/* Projects Section  */}
     </div>
   );
 }
