@@ -36,58 +36,143 @@ function App() {
           boxShadow: '0px 1px 8px rgb(221,221,221)',
         }}
       >
-        <Container className={classes.nav} variant='h1'>
-          <Grid
-            container
-            xs={12}
-            direction='row'
-            className={classes.navInner}
-            alignItems='center'
+        <Container className={classes.nav} variant='h1' maxWidth='false'>
+          <div style={{ maxWidth: 1700, margin: 'auto' }}>
+            <Grid
+              container
+              xs={12}
+              lg={12}
+              direction='row'
+              className={classes.navInner}
+              alignItems='center'
+            >
+              {/* ICON of me */}
+              <Grid item xs={1} lg={1}>
+                <Avatar alt='Mona' src={mona} className={classes.medium} />
+              </Grid>
+              {/* List of project links  */}
+              <Grid container item xs={8} lg={9}>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  aria-label='simple tabs example'
+                  style={{ height: '3em', paddingTop: '.9em' }}
+                  TabIndicatorProps={{
+                    style: { height: '8px', backgroundColor: '#DC143C' },
+                  }}
+                >
+                  <Tab
+                    label={
+                      <Link className={classes.navInner} underline='none'>
+                        Item One
+                      </Link>
+                    }
+                    {...a11yProps(0)}
+                    style={{ padding: 20 }}
+                  />
+                  <Tab
+                    label={
+                      <Link className={classes.navInner} underline='none'>
+                        Item Two
+                      </Link>
+                    }
+                    {...a11yProps(1)}
+                  />
+                  <Tab
+                    label={
+                      <Link className={classes.navInner} underline='none'>
+                        Item Three
+                      </Link>
+                    }
+                    {...a11yProps(2)}
+                  />
+                </Tabs>
+              </Grid>
+              {/* List of external links, linkedin etc  */}
+              <Grid container item xs={3} lg={2} align='right'>
+                <Grid item className={classes.avatarLink}>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://github.com/catmemberMona'
+                  >
+                    <Avatar
+                      alt='github'
+                      src={github}
+                      className={classes.small}
+                    />
+                  </a>
+                </Grid>
+                <Grid item className={classes.avatarLink}>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://www.linkedin.com/in/mona-a-zheng/'
+                  >
+                    <Avatar
+                      alt='linkedin'
+                      src={linkedin}
+                      className={classes.small}
+                    >
+                      L
+                    </Avatar>
+                  </a>
+                </Grid>
+              </Grid>
+            </Grid>
+          </div>
+        </Container>
+      </AppBar>
+      {/* Mona Name and Image first Look Section */}
+      <div style={{ maxWidth: 1700, margin: 'auto' }}>
+        <Container maxWidth='false'>
+          <Typography
+            align='center'
+            className={classes.topSpacing && classes.heading }
           >
-            {/* ICON of me */}
-            <Grid item xs={1} lg={1}>
-              <Avatar alt='Mona' src={mona} className={classes.medium} />
-            </Grid>
-            {/* List of project links  */}
-            <Grid container item xs={8} lg={9}>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                aria-label='simple tabs example'
-                style={{ height: '3em', paddingTop: '.9em' }}
-                TabIndicatorProps={{
-                  style: { height: '8px', backgroundColor: '#DC143C' },
-                }}
-              >
-                <Tab
-                  label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item One
-                    </Link>
-                  }
-                  {...a11yProps(0)}
-                  style={{ padding: 20 }}
-                />
-                <Tab
-                  label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item Two
-                    </Link>
-                  }
-                  {...a11yProps(1)}
-                />
-                <Tab
-                  label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item Three
-                    </Link>
-                  }
-                  {...a11yProps(2)}
-                />
-              </Tabs>
-            </Grid>
-            {/* List of external links, linkedin etc  */}
-            <Grid container item xs={3} lg={2} align='right'>
+            Mona Zheng
+          </Typography>
+        </Container>
+        <Container maxWidth='false'>
+          <Avatar
+            alt='Mona'
+            src={mona}
+            variant='square'
+            className={classes.extraLarge}
+          />
+        </Container>
+      </div>
+      {/* About Mona Section */}
+      <div
+        className={classes.aboutMe}
+        style={{ maxWidth: 1700, margin: 'auto' }}
+      >
+        <Container maxWidth='false'>
+          <Typography className={classes.subHeading}>
+            About Mona
+          </Typography>
+        </Container>
+        <Container maxWidth='false'>
+          <div style={{ maxWidth: 1700, margin: 'auto' }} className={classes.contentText}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in volun proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor i exercitation ullamco laboris nisi ut aliquip ex
+              ea commodoum.
+            </p>
+          </div>
+        </Container>
+        {/* External Links  */}
+        <Container maxWidth='false'>
+          <div style={{ maxWidth: 1700, margin: 'auto' }}>
+            <Grid container xs={4} lg={2} className={classes.externalLinks}>
               <Grid item className={classes.avatarLink}>
                 <a
                   target='_blank'
@@ -113,75 +198,7 @@ function App() {
                 </a>
               </Grid>
             </Grid>
-          </Grid>
-        </Container>
-      </AppBar>
-      {/* Mona Name and Image first Look Section */}
-      <div>
-        <Container>
-          <Typography
-            variant='h2'
-            align='center'
-            className={classes.topSpacing}
-          >
-            Mona Zheng
-          </Typography>
-        </Container>
-        <Container>
-          <Avatar
-            alt='Mona'
-            src={mona}
-            variant='square'
-            className={classes.extraLarge}
-          />
-        </Container>
-      </div>
-      {/* About Mona Section */}
-      <div className={classes.aboutMe}>
-        <Container>
-          <Typography variant='h4' className={classes.topSpacing}>
-            About Mona
-          </Typography>
-        </Container>
-        <Container>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in volun proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor i exercitation ullamco laboris nisi ut aliquip ex ea
-            commodoum.
-          </p>
-        </Container>
-        {/* External Links  */}
-        <Container>
-          <Grid container xs={4} lg={2} className={classes.externalLinks}>
-            <Grid item className={classes.avatarLink}>
-              <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://github.com/catmemberMona'
-              >
-                <Avatar alt='github' src={github} className={classes.small} />
-              </a>
-            </Grid>
-            <Grid item className={classes.avatarLink}>
-              <a
-                target='_blank'
-                rel='noreferrer'
-                href='https://www.linkedin.com/in/mona-a-zheng/'
-              >
-                <Avatar alt='linkedin' src={linkedin} className={classes.small}>
-                  L
-                </Avatar>
-              </a>
-            </Grid>
-          </Grid>
+          </div>
         </Container>
       </div>
     </div>
@@ -220,7 +237,7 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
   },
   topSpacing: {
-    marginTop: '1em',
+    marginTop: '2em',
   },
   container: {
     flex: 1,
@@ -233,7 +250,7 @@ const useStyles = makeStyles((theme) => ({
   medium: {
     width: theme.spacing(8),
     height: theme.spacing(8),
-    border: '.5px darkred solid'
+    border: '.5px darkred solid',
   },
   large: {
     width: theme.spacing(34),
@@ -246,6 +263,21 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: 600,
   },
+  heading: {
+    marginTop: '.3em',
+    fontWeight: 800,
+    padding: '.5em',
+    fontSize: '5em',
+  },
+  subHeading: {
+    marginTop: '3em',
+    fontWeight: 600,
+    fontSize: '2.5em',
+  },
+  contentText: {
+    fontSize: '1.4rem',
+    lineHeight: 1.4
+  }
 }));
 
 export default App;
