@@ -47,7 +47,7 @@ function AboutMe(props) {
         {/* External Links  */}
       <Container maxWidth={false}>
           <div style={{ maxWidth: 1800, margin: 'auto' }}>
-            <Grid container xs={4} lg={2} className={classes.externalLinks}>
+            <Grid container item xs={4} lg={2} className={classes.externalLinks}>
               <Grid item className={classes.avatarLink}>
                 <a
                   target='_blank'
