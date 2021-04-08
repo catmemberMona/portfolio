@@ -21,10 +21,10 @@ function AboutMe(props) {
         className={classes.aboutMe}
         style={{ maxWidth: 1800, margin: 'auto' }}
       >
-        <Container maxWidth='false'>
+        <Container maxWidth={false}>
           <Typography className={classes.subHeading}>About Mona</Typography>
         </Container>
-        <Container maxWidth='false'>
+        <Container maxWidth={false}>
           <div
             style={{ maxWidth: 1400, marginRight: 'auto' }}
             className={classes.contentText}
@@ -45,7 +45,7 @@ function AboutMe(props) {
           </div>
         </Container>
         {/* External Links  */}
-        <Container maxWidth='false'>
+      <Container maxWidth={false}>
           <div style={{ maxWidth: 1800, margin: 'auto' }}>
             <Grid container xs={4} lg={2} className={classes.externalLinks}>
               <Grid item className={classes.avatarLink}>

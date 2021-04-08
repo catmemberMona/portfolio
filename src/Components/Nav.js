@@ -31,12 +31,10 @@ function Nav(props) {
         boxShadow: '0px 1px 8px rgb(221,221,221)',
       }}
     >
-      <Container className={classes.nav} variant='h1' maxWidth='false'>
+      <Container className={classes.nav} variant='h1' maxWidth={false}>
         <div style={{ maxWidth: 1700, margin: 'auto' }}>
           <Grid
             container
-            xs={12}
-            lg={12}
             direction='row'
             className={classes.navInner}
             alignItems='center'

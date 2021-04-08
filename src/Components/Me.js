@@ -12,7 +12,7 @@ function Me(props) {
 
   return (
     <div style={{ maxWidth: 1800, margin: 'auto' }}>
-      <Container maxWidth='false'>
+      <Container maxWidth={false}>
         <Typography
           align='center'
           className={classes.heading}
@@ -20,7 +20,7 @@ function Me(props) {
           Mona Zheng
         </Typography>
       </Container>
-      <Container maxWidth='false'>
+      <Container maxWidth={false}>
         <Avatar
           alt='Mona'
           src={mona}
