@@ -124,7 +124,7 @@ function App() {
         </Container>
       </AppBar>
       {/* Mona Name and Image first Look Section */}
-      <div style={{ maxWidth: 1700, margin: 'auto' }}>
+      <div style={{ maxWidth: 1800, margin: 'auto' }}>
         <Container maxWidth='false'>
           <Typography
             align='center'
@@ -145,7 +145,7 @@ function App() {
       {/* About Mona Section */}
       <div
         className={classes.aboutMe}
-        style={{ maxWidth: 1700, margin: 'auto' }}
+        style={{ maxWidth: 1800, margin: 'auto' }}
       >
         <Container maxWidth='false'>
           <Typography className={classes.subHeading}>
@@ -153,7 +153,7 @@ function App() {
           </Typography>
         </Container>
         <Container maxWidth='false'>
-          <div style={{ maxWidth: 1700, margin: 'auto' }} className={classes.contentText}>
+          <div style={{ maxWidth: 1800, margin: 'auto' }} className={classes.contentText}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -171,7 +171,7 @@ function App() {
         </Container>
         {/* External Links  */}
         <Container maxWidth='false'>
-          <div style={{ maxWidth: 1700, margin: 'auto' }}>
+          <div style={{ maxWidth: 1800, margin: 'auto' }}>
             <Grid container xs={4} lg={2} className={classes.externalLinks}>
               <Grid item className={classes.avatarLink}>
                 <a
@@ -262,7 +262,8 @@ const useStyles = makeStyles((theme) => ({
   extraLarge: {
     marginTop: theme.spacing(2),
     width: '100%',
-    height: 600,
+    height: 750,
+    minHeight: 750,
   },
   heading: {
     marginTop: '.3em',
