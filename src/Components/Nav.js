@@ -3,8 +3,6 @@ import {
   Grid,
   makeStyles,
   Avatar,
-  Typography,
-  Box,
   Container,
   Tabs,
   Tab,
