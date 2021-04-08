@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
   subHeading: {
     marginTop: '3em',
     fontWeight: 600,
-    fontSize: '2.5em',
+    fontSize: '3em',
   },
   contentText: {
     fontSize: '1.4rem',
