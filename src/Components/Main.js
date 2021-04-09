@@ -18,6 +18,7 @@ import github from '../Images/github.png';
 import Nav from './Nav';
 import Me from './Me'
 import AboutMe from './AboutMe'
+import Projects from './Projects'
 
 function Main(props) {
   const classes = useStyles();
@@ -36,6 +37,7 @@ function Main(props) {
       {/* About Mona Section */}
       <AboutMe avatarImages={{ mona, linkedin, github }} />
       {/* Projects Section  */}
+      <Projects />
     </div>
   );
 }
