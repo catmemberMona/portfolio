@@ -12,7 +12,7 @@ function Projects() {
     <div style={{ maxWidth: 1800, margin: 'auto' }}>
       <Container maxWidth={false}>
         <div>
-          <Typography style={styles.subHeading}>About Mona</Typography>
+          <Typography style={styles.subHeading}>Projects</Typography>
         </div>
         <div>
           {topics.map((topic) => {
