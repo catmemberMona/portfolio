@@ -19,14 +19,14 @@ function AboutMe(props) {
   return (
       <div
         className={classes.aboutMe}
-        style={{ maxWidth: 1800, margin: 'auto' }}
+        style={{ maxWidth: 1200, margin: 'auto' }}
       >
         <Container maxWidth={false}>
           <Typography className={classes.subHeading}>About Mona</Typography>
         </Container>
         <Container maxWidth={false}>
           <div
-            style={{ maxWidth: 1400, marginRight: 'auto' }}
+            style={{ maxWidth: 900, marginRight: 'auto' }}
             className={classes.contentText}
           >
             <p>
@@ -46,7 +46,7 @@ function AboutMe(props) {
         </Container>
         {/* External Links  */}
       <Container maxWidth={false}>
-          <div style={{ maxWidth: 1800, margin: 'auto' }}>
+          <div style={{ maxWidth: 1200, margin: 'auto' }}>
             <Grid container item xs={4} lg={2} className={classes.externalLinks}>
               <Grid item className={classes.avatarLink}>
                 <a
@@ -91,17 +91,17 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1em',
   },
   small: {
-    width: theme.spacing(6),
-    height: theme.spacing(6),
+    width: theme.spacing(5),
+    height: theme.spacing(5),
     margin: '1px 1px',
   },
   subHeading: {
-    marginTop: '3em',
-    fontWeight: 600,
-    fontSize: '3em',
+    marginTop: '3.1em',
+    fontWeight: 800,
+    fontSize: '2.2em',
   },
   contentText: {
-    fontSize: '1.4rem',
+    fontSize: '1rem',
     lineHeight: 1.4,
   },
 }));

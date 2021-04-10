@@ -32,7 +32,7 @@ function Nav(props) {
       }}
     >
       <Container className={classes.nav} variant='h1' maxWidth={false}>
-        <div style={{ maxWidth: 1700, margin: 'auto' }}>
+        <div style={{ maxWidth: 1100, margin: 'auto' }}>
           <Grid
             container
             direction='row'
@@ -49,9 +49,9 @@ function Nav(props) {
                 value={value}
                 onChange={handleChange}
                 aria-label='simple tabs example'
-                style={{ height: '3em', paddingTop: '.9em' }}
+                style={{ height: '3.85em', paddingTop: '1.6em' }}
                 TabIndicatorProps={{
-                  style: { height: '8px', backgroundColor: '#DC143C' },
+                  style: { height: '4.8px', backgroundColor: '#DC143C' },
                 }}
               >
                 <Tab
@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navInner: {
     height: '100%',
-    fontSize: '1.55em',
+    fontSize: '1.1em',
     fontWeight: 500,
     color: 'black',
     textDecoration: 'none',
@@ -139,8 +139,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1em',
   },
   small: {
-    width: theme.spacing(6),
-    height: theme.spacing(6),
+    width: theme.spacing(5),
+    height: theme.spacing(5),
     margin: '1px 1px',
   },
   medium: {

@@ -9,7 +9,7 @@ import Project from './Project';
 
 function Projects() {
   return (
-    <div style={{ maxWidth: 1800, margin: 'auto' }}>
+    <div style={{ maxWidth: 1200, margin: 'auto' }}>
       <Container maxWidth={false}>
         <div>
           <Typography style={styles.subHeading}>Projects</Typography>
@@ -41,14 +41,14 @@ const styles = {
     marginTop: '1em',
   },
   subHeading: {
-    marginTop: '3em',
-    fontWeight: 600,
-    fontSize: '3em',
+    marginTop: '3.1em',
+    fontWeight: 800,
+    fontSize: '2.2em',
   },
   contentText: {
-    fontSize: '1.4rem',
+    fontSize: '1rem',
     lineHeight: 1.4,
   },
-}
+};
 
 export default Projects;
