@@ -41,7 +41,7 @@ function Nav(props) {
           >
             {/* ICON of me */}
             <Grid item xs={2} lg={1}>
-              <Avatar alt='Mona' src={mona} className={classes.medium} />
+              <Avatar alt='Mona' variant='rounded' src={mona} className={classes.medium} />
             </Grid>
             {/* List of project links  */}
             <Grid container item xs={8} lg={9}>
@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
   medium: {
     width: theme.spacing(8),
     height: theme.spacing(8),
-    border: '.5px darkred solid',
+    border: '1px orange solid',
   },
 }));
 

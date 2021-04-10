@@ -10,10 +10,10 @@ function ProjectNameAndImage({ title, image }){
   return (
     <div style={{ flex: 2 }}>
       <div>
-        <span style={{ fontSize: '14'}}>{title}</span>
+        <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
       <div>
-        <Avatar src={image} />
+        <Avatar src={image} variant='rounded' style={styles.image} />
       </div>
     </div>
   );
@@ -21,25 +21,49 @@ function ProjectNameAndImage({ title, image }){
 
 function ProjectInfo() {
   return (
-    <div style={{flex: 3}}>
-      <div>Status:</div>
-      <div style={{ flex: 5 }}>
+    <div style={styles.description}>
+      <Typography>Status:</Typography>
+      <Typography>
         Lots of textfjdksajfkfjdksafjdksafjksdjfkdsjafskafjksajf
-      </div>
-      <div>
+      </Typography>
+      <Typography>
         Tech used: 
-      </div>
+      </Typography>
     </div>
   );
 }
 
 function Project({ title, image, content }){
   return (
-    <div style={{ display: 'flex', flex: 1 }}>
+    <div style={styles.container}>
       <ProjectNameAndImage title={title} image={image} />
       <ProjectInfo />
     </div>
   );
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    flex: 1,
+    marginTop: '1.5em',
+  },
+  projectTitle: {
+    fontWeight: 1000,
+    fontSize: '1.2em',
+    paddingTop: ".5em",
+    marginBottom: ".5em"
+  },
+  image: {
+    height: '15em',
+    width: 'auto',
+    marginBottom: '3em',
+  },
+  description: {
+    paddingTop: "5em",
+    paddingLeft: '3em',
+    flex: 2
+  }
 };
 
 export default Project;
