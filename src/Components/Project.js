@@ -28,25 +28,27 @@ function ProjectNameAndImage({ title, image, video }){
   );
 };
 
-function ProjectInfo() {
+function ProjectInfo({ status, content, tech }) {
   return (
     <div style={styles.description}>
-      <Typography>Status:</Typography>
-      <Typography>
-        Lots of textfjdksajfkfjdksafjdksafjksdjfkdsjafskafjksajf
+      <Typography style={styles.spacing}>
+        <span style={{ fontWeight: 800 }}>Status: </span>
+        {status}
       </Typography>
-      <Typography>
-        Tech used: 
+      <Typography style={styles.spacing}>{content}</Typography>
+      <Typography style={styles.spacing}>
+        <span style={{ fontWeight: 800 }}>Tech used: </span>
+        {tech}
       </Typography>
     </div>
   );
 }
 
-function Project({ title, image, video, content }){
+function Project({ title, image, video, status, content, tech }){
   return (
     <div style={styles.container}>
       <ProjectNameAndImage title={title} image={image} video={video} />
-      <ProjectInfo />
+      <ProjectInfo status={status} content={content} tech={tech}/>
     </div>
   );
 };
@@ -72,7 +74,10 @@ const styles = {
   description: {
     paddingTop: "5em",
     paddingLeft: '5em',
-    flex: 2
+    flex: 2,
+  },
+  spacing: {
+    margin: '.3em'
   }
 };
 
