@@ -58,7 +58,7 @@ const styles = {
     display: 'flex',
     flex: 1,
     marginTop: '1.5em',
-    flexWrap: 'wrap,'
+    flexWrap: 'wrap'
   },
   projectTitle: {
     fontWeight: 400,
