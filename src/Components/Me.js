@@ -11,12 +11,10 @@ function Me(props) {
   const mona = props.avatarImage;
 
   return (
-    <div style={{ maxWidth: 1800, margin: 'auto' }}>
+    <div id='me' style={{ maxWidth: 1200, margin: 'auto' }}>
+      <div style={{ marginBottom: '5em', visibility: 'hidden', marginTop: '-5em' }}>Just spacing</div>
       <Container maxWidth={false}>
-        <Typography
-          align='center'
-          className={classes.heading}
-        >
+        <Typography align='center' className={classes.heading}>
           Mona Zheng
         </Typography>
       </Container>
@@ -36,14 +34,14 @@ const useStyles = makeStyles((theme) => ({
   extraLarge: {
     marginTop: theme.spacing(2),
     width: '100%',
-    height: 750,
-    minHeight: 750,
+    height: 510,
+    minHeight: 510,
   },
   heading: {
-    marginTop: '.3em',
+    marginTop: '.5em',
     fontWeight: 800,
-    padding: '.5em',
-    fontSize: '5em',
+    padding: '.35em',
+    fontSize: '4.5em',
   },
 }));
 

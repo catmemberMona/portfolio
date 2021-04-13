@@ -32,7 +32,7 @@ function Nav(props) {
       }}
     >
       <Container className={classes.nav} variant='h1' maxWidth={false}>
-        <div style={{ maxWidth: 1700, margin: 'auto' }}>
+        <div style={{ maxWidth: 1100, margin: 'auto' }}>
           <Grid
             container
             direction='row'
@@ -41,7 +41,13 @@ function Nav(props) {
           >
             {/* ICON of me */}
             <Grid item xs={2} lg={1}>
-              <Avatar alt='Mona' src={mona} className={classes.medium} />
+              <Link href='#me'>
+                    <Avatar
+                  alt='Mona'
+                  variant='rounded'
+                  src={mona}
+                  className={classes.medium}/>
+              </Link>
             </Grid>
             {/* List of project links  */}
             <Grid container item xs={8} lg={9}>
@@ -49,15 +55,19 @@ function Nav(props) {
                 value={value}
                 onChange={handleChange}
                 aria-label='simple tabs example'
-                style={{ height: '3em', paddingTop: '.9em' }}
+                style={{ height: '3.85em', paddingTop: '1.6em' }}
                 TabIndicatorProps={{
-                  style: { height: '8px', backgroundColor: '#DC143C' },
+                  style: { height: '4.8px', backgroundColor: '#DC143C' },
                 }}
               >
                 <Tab
                   label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item One
+                    <Link
+                      className={classes.navInner}
+                      href='#aboutMe'
+                      underline='none'
+                    >
+                      About Me
                     </Link>
                   }
                   {...a11yProps(0)}
@@ -65,19 +75,11 @@ function Nav(props) {
                 />
                 <Tab
                   label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item Two
+                    <Link href="#projects" className={classes.navInner} underline='none'>
+                      Projects
                     </Link>
                   }
                   {...a11yProps(1)}
-                />
-                <Tab
-                  label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item Three
-                    </Link>
-                  }
-                  {...a11yProps(2)}
                 />
               </Tabs>
             </Grid>
@@ -120,10 +122,11 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 70,
     height: '6em',
     fontFamily: 'Roboto, sans-serif',
+    display: 'relative',
   },
   navInner: {
     height: '100%',
-    fontSize: '1.55em',
+    fontSize: '1.1em',
     fontWeight: 500,
     color: 'black',
     textDecoration: 'none',
@@ -139,14 +142,14 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '1em',
   },
   small: {
-    width: theme.spacing(6),
-    height: theme.spacing(6),
+    width: theme.spacing(5),
+    height: theme.spacing(5),
     margin: '1px 1px',
   },
   medium: {
     width: theme.spacing(8),
     height: theme.spacing(8),
-    border: '.5px darkred solid',
+    border: '1px darkGrey solid',
   },
 }));
 
