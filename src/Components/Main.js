@@ -31,7 +31,12 @@ function Main(props) {
   return (
     <div className={classes.root}>
       {/* Navigation Section  */}
-      <Nav avatarImages={{ mona, linkedin, github }} handleChange={handleChange} setValue={setValue} value={value}/>
+      <Nav
+        avatarImages={{ mona, linkedin, github }}
+        handleChange={handleChange}
+        setValue={setValue}
+        value={value}
+      />
       {/* Mona Name and Image first Look Section */}
       <Me avatarImage={mona} />
       {/* About Mona Section */}

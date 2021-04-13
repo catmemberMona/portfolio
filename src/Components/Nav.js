@@ -41,7 +41,13 @@ function Nav(props) {
           >
             {/* ICON of me */}
             <Grid item xs={2} lg={1}>
-              <Avatar alt='Mona' variant='rounded' src={mona} className={classes.medium} />
+              <Link href='#me'>
+                    <Avatar
+                  alt='Mona'
+                  variant='rounded'
+                  src={mona}
+                  className={classes.medium}/>
+              </Link>
             </Grid>
             {/* List of project links  */}
             <Grid container item xs={8} lg={9}>
@@ -56,8 +62,12 @@ function Nav(props) {
               >
                 <Tab
                   label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item One
+                    <Link
+                      className={classes.navInner}
+                      href='#aboutMe'
+                      underline='none'
+                    >
+                      About Me
                     </Link>
                   }
                   {...a11yProps(0)}
@@ -65,19 +75,11 @@ function Nav(props) {
                 />
                 <Tab
                   label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item Two
+                    <Link href="#projects" className={classes.navInner} underline='none'>
+                      Projects
                     </Link>
                   }
                   {...a11yProps(1)}
-                />
-                <Tab
-                  label={
-                    <Link className={classes.navInner} underline='none'>
-                      Item Three
-                    </Link>
-                  }
-                  {...a11yProps(2)}
                 />
               </Tabs>
             </Grid>
@@ -120,6 +122,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: 70,
     height: '6em',
     fontFamily: 'Roboto, sans-serif',
+    display: 'relative',
   },
   navInner: {
     height: '100%',

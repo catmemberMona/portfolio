@@ -9,7 +9,12 @@ import Project from './Project';
 
 function Projects() {
   return (
-    <div style={{ maxWidth: 1200, margin: 'auto' }}>
+    <div id='projects' style={{ maxWidth: 1200, margin: 'auto' }}>
+      <div
+        style={{ marginBottom: '5em', visibility: 'hidden', marginTop: '-5em' }}
+      >
+        Just spacing
+      </div>
       <Container maxWidth={false}>
         <div>
           <Typography style={styles.subHeading}>Projects</Typography>

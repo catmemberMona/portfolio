@@ -11,12 +11,10 @@ function Me(props) {
   const mona = props.avatarImage;
 
   return (
-    <div style={{ maxWidth: 1200, margin: 'auto' }}>
+    <div id='me' style={{ maxWidth: 1200, margin: 'auto' }}>
+      <div style={{ marginBottom: '5em', visibility: 'hidden', marginTop: '-5em' }}>Just spacing</div>
       <Container maxWidth={false}>
-        <Typography
-          align='center'
-          className={classes.heading}
-        >
+        <Typography align='center' className={classes.heading}>
           Mona Zheng
         </Typography>
       </Container>
@@ -43,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '.5em',
     fontWeight: 800,
     padding: '.35em',
-    fontSize: '3.5em',
+    fontSize: '4.5em',
   },
 }));
 

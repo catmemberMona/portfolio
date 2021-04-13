@@ -17,7 +17,7 @@ function AboutMe(props) {
   const classes = useStyles();
 
   return (
-    <div className={classes.aboutMe} style={{ maxWidth: 1200, margin: 'auto' }}>
+    <div id='aboutMe' className={classes.aboutMe} style={{ maxWidth: 1200 }}>
       <Container maxWidth={false} >
         <Typography className={classes.subHeading}>About Mona</Typography>
         <div
@@ -69,6 +69,11 @@ function AboutMe(props) {
 }
 
 const useStyles = makeStyles((theme) => ({
+  aboutMe: {
+    paddingTop: '10em',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
   externalLinks: {
     display: 'flex',
     flexDirection: 'row',
@@ -85,7 +90,6 @@ const useStyles = makeStyles((theme) => ({
     margin: '1px 1px',
   },
   subHeading: {
-    marginTop: '3.1em',
     fontWeight: 600,
     fontSize: '3em',
     marginBottom: '1em',
