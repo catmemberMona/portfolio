@@ -58,10 +58,10 @@ const styles = {
     marginTop: '1.5em',
   },
   projectTitle: {
-    fontWeight: 1000,
-    fontSize: '1.2em',
+    fontWeight: 400,
+    fontSize: '2em',
     paddingTop: ".5em",
-    marginBottom: ".5em"
+    marginBottom: ".4em"
   },
   image: {
     display: 'block',
