@@ -6,14 +6,23 @@ import {
 } from '@material-ui/core';
 
 
-function ProjectNameAndImage({ title, image }){
+function ProjectNameAndImage({ title, image, video }){
   return (
     <div style={{ flex: 2 }}>
       <div>
         <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
       <div>
-        <Avatar src={image} variant='rounded' style={styles.image} />
+        {image !== '' ?
+          <div style={styles.image}>
+            <img src={image} height="100%" />
+          </div>
+          :
+          <div style={styles.image}>
+            {video}
+          </div>
+        }
+        
       </div>
     </div>
   );
@@ -33,10 +42,10 @@ function ProjectInfo() {
   );
 }
 
-function Project({ title, image, content }){
+function Project({ title, image, video, content }){
   return (
     <div style={styles.container}>
-      <ProjectNameAndImage title={title} image={image} />
+      <ProjectNameAndImage title={title} image={image} video={video} />
       <ProjectInfo />
     </div>
   );
@@ -55,13 +64,14 @@ const styles = {
     marginBottom: ".5em"
   },
   image: {
-    height: '15em',
-    width: 'auto',
+    display: 'block',
+    height: '16em',
+    width: '100%',
     marginBottom: '3em',
   },
   description: {
     paddingTop: "5em",
-    paddingLeft: '3em',
+    paddingLeft: '5em',
     flex: 2
   }
 };

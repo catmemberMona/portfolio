@@ -1,4 +1,6 @@
 import mona from '../Images/mona.jpeg'
+import memory from '../Images/memory.png'
+import simon from '../Images/simon2.png'
 
 export default [
   {
@@ -15,7 +17,7 @@ export default [
       'Test your memory and typing skill. Web broswer game created during the Mintbean weekly learnathon challenge. Completed with teammates Jamie and Scott. Not supported for mobile browser.',
     tech: 'Create-React-App, etc',
     image:
-      'http://www.girardatlarge.com/wp-content/uploads/2013/05/gravatar-60-grey.jpg',
+      memory,
   },
   {
     title: 'Simon',
@@ -23,7 +25,7 @@ export default [
     content: 'This is the 3rd content of the application',
     tech: '',
     image:
-      'http://www.girardatlarge.com/wp-content/uploads/2013/05/gravatar-60-grey.jpg',
+      simon,
   },
   {
     title: 'scavengARescape',
@@ -34,11 +36,12 @@ export default [
     image: '',
     video: (
       <iframe
-        width='560'
-        height='315'
+        display='block'
+        width='100%'
+        height='110%'
         src='https://www.youtube-nocookie.com/embed/VGoNcz_78Ns'
         title='YouTube video player'
-        frameborder='1'
+        frameborder='0'
         allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
       ></iframe>
     ),
