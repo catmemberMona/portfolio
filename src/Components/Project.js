@@ -8,7 +8,7 @@ import {
 
 function ProjectNameAndImage({ title, image, video }){
   return (
-    <div style={{ flex: 2 }}>
+    <div style={{ flex: 2, padding: '.5em' }}>
       <div>
         <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
@@ -58,6 +58,7 @@ const styles = {
     display: 'flex',
     flex: 1,
     marginTop: '1.5em',
+    flexWrap: 'wrap,'
   },
   projectTitle: {
     fontWeight: 400,
@@ -72,9 +73,12 @@ const styles = {
     marginBottom: '3em',
   },
   description: {
-    paddingTop: "5em",
-    paddingLeft: '5em',
+    display: 'flex',
+    flexDirection: 'column',
     flex: 2,
+    minWidth: 300,
+    justifyContent: 'center',
+    
   },
   spacing: {
     margin: '.3em'
