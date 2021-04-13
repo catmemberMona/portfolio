@@ -42,8 +42,9 @@ const styles = {
   },
   subHeading: {
     marginTop: '3.1em',
-    fontWeight: 800,
-    fontSize: '2.2em',
+    fontWeight: 600,
+    fontSize: '3em',
+    marginBottom: '1em',
   },
   contentText: {
     fontSize: '1rem',
