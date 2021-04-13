@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
   medium: {
     width: theme.spacing(8),
     height: theme.spacing(8),
-    border: '1px orange solid',
+    border: '1px darkGrey solid',
   },
 }));
 
