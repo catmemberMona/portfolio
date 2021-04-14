@@ -70,7 +70,7 @@ function Nav(props) {
                 </Link>
               </Grid>
               {/* List of project links  */}
-              <Grid container item xs={8} lg={9}>
+              <Grid container item xs={7} lg={9}>
                 <Tabs
                   value={value}
                   onChange={handleChange}
@@ -108,7 +108,7 @@ function Nav(props) {
                 </Tabs>
               </Grid>
               {/* List of external links, linkedin etc  */}
-              <Grid container item xs={2} lg={2} align='right'>
+              <Grid container item xs={3} lg={2} align='right'>
                 <Grid item className={classes.avatarLink}>
                   <a
                     target='_blank'
