@@ -77,7 +77,7 @@ function Nav(props) {
                   aria-label='simple tabs example'
                   style={{ height: '3.85em', paddingTop: '1.6em' }}
                   TabIndicatorProps={{
-                    style: { height: '4.8px', backgroundColor: '#DC143C' },
+                    style: { height: '0px', backgroundColor: '#DC143C' },
                   }}
                 >
                   <Tab
