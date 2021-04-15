@@ -14,7 +14,7 @@ export default [
   },
   {
     title: 'Memory Maddening',
-    status: 'Completed/Deployed',
+    status: 'Completed | Deployed',
     links: [
       'https://github.com/Jam52/mintbean-typing-karaoke',
       'https://memorymaddening.herokuapp.com/',
