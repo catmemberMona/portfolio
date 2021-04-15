@@ -43,9 +43,9 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     marginTop: '.5em',
-    fontWeight: 800,
+    fontWeight: 300,
     padding: '.35em',
-    fontSize: '4.5em',
+    fontSize: '7em',
   },
 }));
 
