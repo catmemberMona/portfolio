@@ -1,4 +1,4 @@
-import mona from '../Images/mona.jpeg'
+import portfolioImg from '../Images/portfolioImg.png'
 import memory from '../Images/memory.png'
 import simon from '../Images/simon2.png'
 
@@ -10,11 +10,11 @@ export default [
     content:
       'I created this portfolio page in order to present my goals and projects in more web friendly manner than compared to viewing the bullet points on my resume.',
     tech: 'Create-React-App, Material-UI, Github pages',
-    image: mona,
+    image: portfolioImg,
   },
   {
     title: 'Memory Maddening',
-    status: 'Completed/Deployed',
+    status: 'Completed | Deployed',
     links: [
       'https://github.com/Jam52/mintbean-typing-karaoke',
       'https://memorymaddening.herokuapp.com/',
@@ -43,7 +43,7 @@ export default [
     video: (
       <iframe
         display='block'
-        width='90%'
+        width='79%'
         height='100%'
         src='https://www.youtube-nocookie.com/embed/VGoNcz_78Ns'
         title='YouTube video player'

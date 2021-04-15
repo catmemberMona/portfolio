@@ -28,12 +28,23 @@ function ProjectNameAndImage({ title, image, video }){
   );
 };
 
-function ProjectInfo({ status, content, tech }) {
+function ProjectInfo({ status, content, tech, links }) {
   return (
     <div style={styles.description}>
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Status: </span>
         {status}
+      </Typography>
+      <Typography style={styles.spacing}>
+        <span style={{ fontWeight: 800 }}>Links: </span>
+
+        <a style={{ textDecoration: 'none', color: 'black' }} href={links[0]}>
+          Github
+        </a>
+        {links[1] && <span> | <a style={{ textDecoration: 'none', color: 'black' }} href={links[1]}>
+         Deployed Site</a></span>
+        }
+
       </Typography>
       <Typography style={styles.spacing}>{content}</Typography>
       <Typography style={styles.spacing}>
@@ -44,11 +55,11 @@ function ProjectInfo({ status, content, tech }) {
   );
 }
 
-function Project({ title, image, video, status, content, tech }){
+function Project({ title, image, video, status, links, content, tech }){
   return (
     <div style={styles.container}>
       <ProjectNameAndImage title={title} image={image} video={video} />
-      <ProjectInfo status={status} content={content} tech={tech}/>
+      <ProjectInfo status={status} content={content} tech={tech} links={links}/>
     </div>
   );
 };
