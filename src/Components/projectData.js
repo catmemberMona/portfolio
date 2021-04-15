@@ -8,8 +8,7 @@ export default [
     status: 'Ongoing',
     links: ['https://github.com/catmemberMona/portfolio'],
     content:
-      'I created this portfolio page in order to present my goals and projects in more web friendly manner than compared to viewing the bullet points on my resume.',
-    tech: 'Create-React-App, Material-UI, Github pages',
+      "Tell me this isn't more eye pleasing than looking at my resume.",
     image: portfolioImg,
   },
   {
