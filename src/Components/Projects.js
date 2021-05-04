@@ -3,6 +3,7 @@ import {
   Divider,
   Container,
   Typography,
+  Paper
 } from '@material-ui/core';
 import topics from './projectData'
 import Project from './Project';
@@ -15,7 +16,8 @@ function Projects() {
         borderTop: '0.5px solid rgba(43, 34, 7, .1)',
         borderBottom: '0.5px solid rgba(43, 34, 7, .1)',
         marginTop: '5em',
-        marginBottom: '5em'
+        marginBottom: '2em',
+        paddingBottom: '1em'
       }}
     >
       <div id='projects' style={{ maxWidth: 1200, margin: 'auto' }}>
@@ -26,9 +28,10 @@ function Projects() {
           <div>
             {topics.map((topic) => {
               return (
-                <div>
-                  <Project {...topic} />
-                  <Divider inset={true} />
+                <div style={{marginTop: '1em'}}>
+                  <Paper style={{padding: '2em'}}>
+                    <Project {...topic} />
+                  </Paper>
                 </div>
               );
             })}

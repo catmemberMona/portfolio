@@ -112,14 +112,14 @@ const styles = {
   },
   image: {
     display: 'block',
-    height: '16em',
-    width: '100%',
+    height: '12em',
+    width: 'auto',
     marginBottom: '3em',
   },
   description: {
     display: 'flex',
     flexDirection: 'column',
-    flex: 2,
+    flex: 3,
     minWidth: 300,
     justifyContent: 'center',
     
