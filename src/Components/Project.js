@@ -6,23 +6,33 @@ import {
 } from '@material-ui/core';
 
 
-function ProjectNameAndImage({ title, image, video }){
+function ProjectNameAndImage({ title, image, video, links }){
   return (
     <div style={{ flex: 2, padding: '.5em' }}>
       <div>
         <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
       <div>
-        {image !== '' ?
+        {/* check if there is a video or image */}
+        {image !== '' ? (
           <div style={styles.image}>
-            <img src={image} height="100%" />
+            {/* check if there is a deployed link  */}
+            {links[1] ? (
+              // make image clickable and send to deployed site 
+              <a
+                style={{ textDecoration: 'none', color: 'black' }}
+                href={links[1]}
+              >
+                <img src={image} height='100%' />
+              </a>
+            ) : (
+                // return regular image
+              <img src={image} height='100%' />
+            )}
           </div>
-          :
-          <div style={styles.image}>
-            {video}
-          </div>
-        }
-        
+        ) : (
+          <div style={styles.image}>{video}</div>
+        )}
       </div>
     </div>
   );
@@ -81,7 +91,7 @@ function ProjectInfo({ status, content, tech, links, notes }) {
 function Project({ title, image, video, status, links, content, tech, notes }){
   return (
     <div style={styles.container}>
-      <ProjectNameAndImage title={title} image={image} video={video} />
+      <ProjectNameAndImage title={title} image={image} video={video} links={links}/>
       <ProjectInfo status={status} content={content} tech={tech} links={links} notes={notes}/>
     </div>
   );
