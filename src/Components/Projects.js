@@ -51,7 +51,7 @@ const styles = {
     marginTop: '1em',
   },
   subHeading: {
-    paddingTop: '1em',
+    paddingTop: '1.5em',
     fontWeight: 600,
     fontSize: '3em',
   },
