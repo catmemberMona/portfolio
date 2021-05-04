@@ -9,27 +9,32 @@ import Project from './Project';
 
 function Projects() {
   return (
-    <div id='projects' style={{ maxWidth: 1200, margin: 'auto' }}>
-      <div
-        style={{ marginBottom: '5em', visibility: 'hidden', marginTop: '-5em' }}
-      >
-        Just spacing
+    <div
+      style={{
+        backgroundColor: 'rgba(43, 34, 7, .2)',
+        borderTop: '0.5px solid rgba(43, 34, 7, .1)',
+        borderBottom: '0.5px solid rgba(43, 34, 7, .1)',
+        marginTop: '5em',
+        marginBottom: '5em'
+      }}
+    >
+      <div id='projects' style={{ maxWidth: 1200, margin: 'auto' }}>
+        <Container maxWidth={false}>
+          <div>
+            <Typography style={styles.subHeading}>Projects</Typography>
+          </div>
+          <div>
+            {topics.map((topic) => {
+              return (
+                <div>
+                  <Project {...topic} />
+                  <Divider inset={true} />
+                </div>
+              );
+            })}
+          </div>
+        </Container>
       </div>
-      <Container maxWidth={false}>
-        <div>
-          <Typography style={styles.subHeading}>Projects</Typography>
-        </div>
-        <div>
-          {topics.map((topic) => {
-            return (
-              <div>
-                <Project {...topic} />
-                <Divider inset={true} />
-              </div>
-            );
-          })}
-        </div>
-      </Container>
     </div>
   );
 }
@@ -46,10 +51,9 @@ const styles = {
     marginTop: '1em',
   },
   subHeading: {
-    marginTop: '3.1em',
+    paddingTop: '1em',
     fontWeight: 600,
     fontSize: '3em',
-    marginBottom: '1em',
   },
   contentText: {
     fontSize: '1rem',
