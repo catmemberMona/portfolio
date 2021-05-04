@@ -41,12 +41,25 @@ function ProjectInfo({ status, content, tech, links }) {
         <a style={{ textDecoration: 'none', color: 'black' }} href={links[0]}>
           Github
         </a>
-        {links[1] && <span> | <a style={{ textDecoration: 'none', color: 'black' }} href={links[1]}>
-         Deployed Site</a></span>
-        }
-
+        {links[1] && (
+          <span>
+            {' '}
+            |{' '}
+            <a
+              style={{ textDecoration: 'none', color: 'black' }}
+              href={links[1]}
+            >
+              Deployed Site
+            </a>
+          </span>
+        )}
       </Typography>
-      <Typography style={styles.spacing}>{content}</Typography>
+      <Typography style={styles.spacing}>
+        <div style={{ fontWeight: 800 }}>Description: </div>
+        {content.map((paragraph) => (
+          <Typography style={styles.spacing}>{paragraph}</Typography>
+        ))}
+      </Typography>
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Tech used: </span>
         {tech}
