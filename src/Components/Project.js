@@ -28,7 +28,7 @@ function ProjectNameAndImage({ title, image, video }){
   );
 };
 
-function ProjectInfo({ status, content, tech, links }) {
+function ProjectInfo({ status, content, tech, links, notes }) {
   return (
     <div style={styles.description}>
       <Typography style={styles.spacing}>
@@ -60,6 +60,16 @@ function ProjectInfo({ status, content, tech, links }) {
           <Typography style={styles.spacing}>{paragraph}</Typography>
         ))}
       </Typography>
+      {notes.length > 0 && (
+        <Typography style={styles.spacing}>
+          <span style={{ fontWeight: 800 }}>Notes: </span>
+          <ul>
+            {notes.map((note) => (
+              <li style={styles.spacing}>{note}</li>
+            ))}
+          </ul>
+        </Typography>
+      )}
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Tech used: </span>
         {tech}
@@ -68,11 +78,11 @@ function ProjectInfo({ status, content, tech, links }) {
   );
 }
 
-function Project({ title, image, video, status, links, content, tech }){
+function Project({ title, image, video, status, links, content, tech, notes }){
   return (
     <div style={styles.container}>
       <ProjectNameAndImage title={title} image={image} video={video} />
-      <ProjectInfo status={status} content={content} tech={tech} links={links}/>
+      <ProjectInfo status={status} content={content} tech={tech} links={links} notes={notes}/>
     </div>
   );
 };
