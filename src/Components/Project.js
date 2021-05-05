@@ -10,8 +10,9 @@ function ProjectImage({ title, image, video, links }){
       style={{
         flex: 2,
         ...styles.content,
-        backgroundColor: 'grey',
-        border: '1px solid lightGrey',
+        backgroundColor: 'rgba(43, 34, 7, .2)',
+        border: '.5px solid rgba(43, 34, 7, .3)',
+        borderRadius: 5,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
