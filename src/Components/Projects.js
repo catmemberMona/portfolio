@@ -36,24 +36,10 @@ function Projects() {
 }
 
 const styles = {
-  externalLinks: {
-    display: 'flex',
-    flexDirection: 'row',
-    flex: 1,
-    alignItems: 'center',
-  },
-  avatarLink: {
-    flex: 1,
-    marginTop: '1em',
-  },
   subHeading: {
     paddingTop: '1.5em',
     fontWeight: 600,
     fontSize: '3em',
-  },
-  contentText: {
-    fontSize: '1rem',
-    lineHeight: 1.4,
   },
   projectsContainer: {
     backgroundColor: 'rgba(43, 34, 7, .2)',

@@ -13,6 +13,7 @@ function ProjectImage({ title, image, video, links }){
         flex: 2,
         ...styles.content,
         backgroundColor: 'grey',
+        border: '1px solid lightGrey',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -52,7 +53,7 @@ function ProjectInfo({ status, content, tech, links, notes }) {
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Links: </span>
 
-        <a style={{ textDecoration: 'none', color: 'black' }} href={links[0]}>
+        <a style={{ textDecoration: 'none', color: 'brown' }} href={links[0]}>
           Github
         </a>
         {links[1] && (
@@ -60,7 +61,7 @@ function ProjectInfo({ status, content, tech, links, notes }) {
             {' '}
             |{' '}
             <a
-              style={{ textDecoration: 'none', color: 'black' }}
+              style={{ textDecoration: 'none', color: 'brown' }}
               href={links[1]}
             >
               Deployed Site
@@ -148,7 +149,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     flex: 3,
-    minWidth: 300,
+    // minWidth: 300,
     justifyContent: 'center',
     maxWidth: 800,
   },

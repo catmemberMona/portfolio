@@ -73,7 +73,7 @@ export default [
     video: (
       <iframe
         display='block'
-        width='79%'
+        width='100%'
         height='100%'
         src='https://www.youtube-nocookie.com/embed/VGoNcz_78Ns'
         title='YouTube video player'
