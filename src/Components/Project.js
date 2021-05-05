@@ -1,8 +1,6 @@
 import React from 'react';
 import {
-  Avatar,
   Typography,
-  Link,
 } from '@material-ui/core';
 
 
