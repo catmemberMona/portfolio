@@ -9,10 +9,6 @@ import {
 function ProjectNameAndImage({ title, image, video, links }){
   return (
     <div style={{ flex: 2, padding: '.5em' }}>
-      <div>
-        <Typography style={styles.projectTitle}>{title}</Typography>
-      </div>
-      <div>
         {/* check if there is a video or image */}
         {image !== '' ? (
           <div style={styles.image}>
@@ -34,7 +30,6 @@ function ProjectNameAndImage({ title, image, video, links }){
           <div style={styles.image}>{video}</div>
         )}
       </div>
-    </div>
   );
 };
 
@@ -91,8 +86,22 @@ function ProjectInfo({ status, content, tech, links, notes }) {
 function Project({ title, image, video, status, links, content, tech, notes }){
   return (
     <div style={styles.container}>
-      <ProjectNameAndImage title={title} image={image} video={video} links={links}/>
-      <ProjectInfo status={status} content={content} tech={tech} links={links} notes={notes}/>
+      <div>
+        <Typography style={styles.projectTitle}>{title}</Typography>
+      </div>
+        <ProjectNameAndImage
+          title={title}
+          image={image}
+          video={video}
+          links={links}
+        />
+        <ProjectInfo
+          status={status}
+          content={content}
+          tech={tech}
+          links={links}
+          notes={notes}
+        />
     </div>
   );
 };
@@ -102,12 +111,12 @@ const styles = {
     display: 'flex',
     flex: 1,
     marginTop: '1.5em',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    flexDirection: 'column'
   },
   projectTitle: {
     fontWeight: 400,
     fontSize: '2em',
-    paddingTop: ".5em",
     marginBottom: ".4em"
   },
   image: {

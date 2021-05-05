@@ -10,31 +10,24 @@ import Project from './Project';
 
 function Projects() {
   return (
-    <div
-      style={{
-        backgroundColor: 'rgba(43, 34, 7, .2)',
-        borderTop: '0.5px solid rgba(43, 34, 7, .1)',
-        borderBottom: '0.5px solid rgba(43, 34, 7, .1)',
-        marginTop: '5em',
-        marginBottom: '2em',
-        paddingBottom: '1em'
-      }}
-    >
+    <div style={styles.projectsContainer}>
       <div id='projects' style={{ maxWidth: 1200, margin: 'auto' }}>
         <Container maxWidth={false}>
-          <div>
-            <Typography style={styles.subHeading}>Projects</Typography>
-          </div>
-          <div>
-            {topics.map((topic) => {
-              return (
-                <div style={{marginTop: '1em'}}>
-                  <Paper style={{padding: '2em'}}>
-                    <Project {...topic} />
-                  </Paper>
-                </div>
-              );
-            })}
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{flex:1}}>
+              <Typography style={styles.subHeading}>Projects</Typography>
+            </div>
+            <div style={{flex:5}}>
+              {topics.map((topic) => {
+                return (
+                  <div style={{ marginTop: '1em' }}>
+                    <Paper style={{ padding: '2em' }}>
+                      <Project {...topic} />
+                    </Paper>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </Container>
       </div>
@@ -61,6 +54,14 @@ const styles = {
   contentText: {
     fontSize: '1rem',
     lineHeight: 1.4,
+  },
+  projectsContainer: {
+    backgroundColor: 'rgba(43, 34, 7, .2)',
+    borderTop: '0.5px solid rgba(43, 34, 7, .1)',
+    borderBottom: '0.5px solid rgba(43, 34, 7, .1)',
+    marginTop: '5em',
+    marginBottom: '2em',
+    paddingBottom: '1em',
   },
 };
 
