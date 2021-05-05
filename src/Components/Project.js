@@ -28,11 +28,23 @@ function ProjectImage({ title, image, video, links }){
               style={{ textDecoration: 'none', color: 'black' }}
               href={links[1]}
             >
-              <img src={image} height='100%' />
+              <img
+                src={image}
+                style={{
+                  border: '4 black solid',
+                  borderRadius: 3,
+                
+                }}
+                height='100%'
+              />
             </a>
           ) : (
             // return regular image
-            <img src={image} height='100%' />
+            <img
+              src={image}
+              style={{ border: '4 black solid', borderRadius: 3 }}
+              height='100%'
+            />
           )}
         </div>
       ) : (
@@ -135,14 +147,12 @@ const styles = {
     display: 'block',
     height: '12em',
     width: 'auto',
-
   },
   content: {
     paddingLeft: '10em',
     paddingRight: '10em',
     paddingTop: '2em',
     paddingBottom: '2em',
-
   },
   description: {
     display: 'flex',
