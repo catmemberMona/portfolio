@@ -6,36 +6,45 @@ import {
 } from '@material-ui/core';
 
 
-function ProjectNameAndImage({ title, image, video, links }){
+function ProjectImage({ title, image, video, links }){
   return (
-    <div style={{ flex: 2, padding: '.5em' }}>
-        {/* check if there is a video or image */}
-        {image !== '' ? (
-          <div style={styles.image}>
-            {/* check if there is a deployed link  */}
-            {links[1] ? (
-              // make image clickable and send to deployed site 
-              <a
-                style={{ textDecoration: 'none', color: 'black' }}
-                href={links[1]}
-              >
-                <img src={image} height='100%' />
-              </a>
-            ) : (
-                // return regular image
+    <div
+      style={{
+        flex: 2,
+        ...styles.content,
+        backgroundColor: 'grey',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {/* check if there is a video or image */}
+      {image !== '' ? (
+        <div style={styles.image}>
+          {/* check if there is a deployed link  */}
+          {links[1] ? (
+            // make image clickable and send to deployed site
+            <a
+              style={{ textDecoration: 'none', color: 'black' }}
+              href={links[1]}
+            >
               <img src={image} height='100%' />
-            )}
-          </div>
-        ) : (
-          <div style={styles.image}>{video}</div>
-        )}
-      </div>
+            </a>
+          ) : (
+            // return regular image
+            <img src={image} height='100%' />
+          )}
+        </div>
+      ) : (
+        <div style={styles.image}>{video}</div>
+      )}
+    </div>
   );
 };
 
 function ProjectInfo({ status, content, tech, links, notes }) {
   return (
-    <div style={styles.description}>
+    <div style={styles.description, styles.content}>
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Status: </span>
         {status}
@@ -89,8 +98,8 @@ function Project({ title, image, video, status, links, content, tech, notes }){
       <div>
         <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
-      <div style={styles.content}>
-        <ProjectNameAndImage
+      {/* <div style={styles.content}> */}
+        <ProjectImage
           title={title}
           image={image}
           video={video}
@@ -103,7 +112,7 @@ function Project({ title, image, video, status, links, content, tech, notes }){
           links={links}
           notes={notes}
         />
-      </div>
+      {/* </div> */}
     </div>
   );
 };
@@ -114,26 +123,26 @@ const styles = {
     flex: 1,
     marginTop: '1.5em',
     flexWrap: 'wrap',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   projectTitle: {
     fontWeight: 600,
     fontSize: '2em',
-    marginBottom: ".4em",
-    textAlign: 'center '
-
+    marginBottom: '.4em',
+    textAlign: 'center ',
   },
   image: {
     display: 'block',
     height: '12em',
     width: 'auto',
-    marginBottom: '3em',
+
   },
   content: {
     paddingLeft: '10em',
     paddingRight: '10em',
-    paddingTop: '1em',
-    paddingBottom: '2em'
+    paddingTop: '2em',
+    paddingBottom: '2em',
+
   },
   description: {
     display: 'flex',
@@ -141,12 +150,11 @@ const styles = {
     flex: 3,
     minWidth: 300,
     justifyContent: 'center',
-    maxWidth: 800
-    
+    maxWidth: 800,
   },
   spacing: {
-    margin: '.3em'
-  }
+    margin: '.3em',
+  },
 };
 
 export default Project;
