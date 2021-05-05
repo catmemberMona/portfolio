@@ -1,16 +1,34 @@
 import portfolioImg from '../Images/portfolioImg.png'
 import memory from '../Images/memory.png'
 import simon from '../Images/simon2.png'
+import bellTower from '../Images/bellTowerOn.png'
 
 export default [
   {
     title: "Mona's Portfolio",
     status: 'Ongoing',
     links: ['https://github.com/catmemberMona/portfolio'],
-    content:
+    content: [
       "Tell me this doesn't look more visually pleasing compared to looking at my resume.",
+    ],
+    notes: [],
     tech: 'Create-React-App, Material-UI, Github pages',
     image: portfolioImg,
+  },
+  {
+    title: 'Hourly Bell Tower',
+    status: 'Ongoing',
+    links: ['https://github.com/catmemberMona/clockTowerBellReminderIOS'],
+    content: [
+      'Time flows forward and the speed of time does not change for individuals.',
+      'Hourly Bell Tower reminds users that time is always moving forward. A bell will ring every hour every day, starting the user’s day with a set first bell and ending the day with the last bell.',
+      'This application is for those that want an hourly reminder of the time without having to think about repeatedly setting and shutting off an alarm.',
+      `A bell will sound for each notification, reminding the user an hour has past. Users can turn the notifications and sound off by tapping the screen and turn them back on by tapping the screen when needed. \n
+        The user interface will change depending on if it is set to an on or off state.`,
+    ],
+    notes: ["Currently being reviewed to be published to Apple's App Store"],
+    tech: 'Swift, Uikit',
+    image: bellTower,
   },
   {
     title: 'Memory Maddening',
@@ -19,18 +37,26 @@ export default [
       'https://github.com/Jam52/mintbean-typing-karaoke',
       'https://memorymaddening.herokuapp.com/',
     ],
-    content:
-      'Test your memory and typing skill. This is a web broswer game created during the Mintbean weekly learnathon challenge. Completed with teammates Jamie and Scott. This game is not supported on the mobile browser.',
+    content: [
+      'Tests your memory and typing skills. The user will see a card that displays a word before being flipped. The user will then quickly and accurately type the word before the card flips again, showing a new word.',
+      'This is a web browser game created with a team during the Mintbean weekly learnathon challenge. Completed with teammates Jamie and Scott.',
+      ,
+    ],
+    notes: ['This game is not supported on the mobile browser.'],
     tech:
       'React, CSS, Material-UI, React-Card-Flip, React-Countdown-Hook, React-Router-DOM, Random-Word-Api, Axios',
     image: memory,
   },
   {
-    title: 'Simon',
+    title: 'Diamond Memory Game',
     status: 'Ongoing',
     links: ['https://github.com/catmemberMona/simon-says'],
-    content:
-      'I was reminded of this good childhood game when I was playing the current popular game AmongUs. So I created a mobile version of it. It is currently not deployed, but will contain updates and be packaged to the Apple App Store in the future.',
+    content: [
+      'I was reminded of this good childhood game when I was playing the current popular game AmongUs. So I created a mobile version of it.',
+    ],
+    notes: [
+      'It is currently not deployed, but will contain updates and be packaged to apple TestFlight in the future.',
+    ],
     tech: 'React-Native, React, Async-Storage, React-Native-Sound',
     image: simon,
   },
@@ -38,14 +64,16 @@ export default [
     title: 'scavengARescape',
     status: 'Completed',
     links: ['https://github.com/Capstone-E/ScavengAR-Escape'],
-    content:
+    content: [
       'Enter portals and collect keys, all through the use of your mobile device and your body. This game was the starting point for my mobile development. ScavengARescape is my capstone project when attending FullStack Academy. Created with three of my fellow classmates: Kali, Ashley, and Kristi.',
+    ],
+    notes: [],
     tech: 'ViroMedia (ViroReact), React, Redux',
     image: '',
     video: (
       <iframe
         display='block'
-        width='79%'
+        width='100%'
         height='100%'
         src='https://www.youtube-nocookie.com/embed/VGoNcz_78Ns'
         title='YouTube video player'
