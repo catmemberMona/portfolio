@@ -89,6 +89,7 @@ function Project({ title, image, video, status, links, content, tech, notes }){
       <div>
         <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
+      <div style={styles.content}>
         <ProjectNameAndImage
           title={title}
           image={image}
@@ -102,6 +103,7 @@ function Project({ title, image, video, status, links, content, tech, notes }){
           links={links}
           notes={notes}
         />
+      </div>
     </div>
   );
 };
@@ -115,9 +117,11 @@ const styles = {
     flexDirection: 'column'
   },
   projectTitle: {
-    fontWeight: 400,
+    fontWeight: 600,
     fontSize: '2em',
-    marginBottom: ".4em"
+    marginBottom: ".4em",
+    textAlign: 'center '
+
   },
   image: {
     display: 'block',
@@ -125,12 +129,19 @@ const styles = {
     width: 'auto',
     marginBottom: '3em',
   },
+  content: {
+    paddingLeft: '10em',
+    paddingRight: '10em',
+    paddingTop: '1em',
+    paddingBottom: '2em'
+  },
   description: {
     display: 'flex',
     flexDirection: 'column',
     flex: 3,
     minWidth: 300,
     justifyContent: 'center',
+    maxWidth: 800
     
   },
   spacing: {
