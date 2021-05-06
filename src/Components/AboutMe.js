@@ -70,7 +70,7 @@ function AboutMe(props) {
 
 const useStyles = makeStyles((theme) => ({
   aboutMe: {
-    paddingTop: '10em',
+    paddingTop: '8em',
     marginLeft: 'auto',
     marginRight: 'auto',
   },
