@@ -1,7 +1,11 @@
 import portfolioImg from '../Images/portfolioImg.png'
 import memory from '../Images/memory.png'
-import simon from '../Images/simon2.png'
+import simon1 from '../Images/simonStart.png'
+import simon2 from '../Images/simon2.png'
+import simon3 from '../Images/simon1.png'
 import bellTower from '../Images/bellTowerOn.png'
+import bellTower2 from '../Images/bellTowerOff.png'
+
 
 export default [
   {
@@ -13,7 +17,7 @@ export default [
     ],
     notes: [],
     tech: 'Create-React-App, Material-UI, Github pages',
-    image: portfolioImg,
+    images: [portfolioImg,]
   },
   {
     title: 'Hourly Bell Tower',
@@ -28,7 +32,7 @@ export default [
     ],
     notes: ["Currently being reviewed to be published to Apple's App Store"],
     tech: 'Swift, Uikit',
-    image: bellTower,
+    images: [bellTower, bellTower2],
   },
   {
     title: 'Memory Maddening',
@@ -45,7 +49,7 @@ export default [
     notes: ['This game is not supported on the mobile browser.'],
     tech:
       'React, CSS, Material-UI, React-Card-Flip, React-Countdown-Hook, React-Router-DOM, Random-Word-Api, Axios',
-    image: memory,
+    images: [memory],
   },
   {
     title: 'Diamond Memory Game',
@@ -58,7 +62,7 @@ export default [
       'It is currently not deployed, but will contain updates and be packaged to apple TestFlight in the future.',
     ],
     tech: 'React-Native, React, Async-Storage, React-Native-Sound',
-    image: simon,
+    images: [simon1, simon2, simon3],
   },
   {
     title: 'scavengARescape',
@@ -69,7 +73,7 @@ export default [
     ],
     notes: [],
     tech: 'ViroMedia (ViroReact), React, Redux',
-    image: '',
+    images: [],
     video: (
       <iframe
         display='block'

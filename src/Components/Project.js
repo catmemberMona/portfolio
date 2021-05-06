@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 
 
-function ProjectImage({ title, image, video, links }){
+function ProjectImage({ title, images, video, links }){
   return (
     <div
       style={{
@@ -18,34 +18,38 @@ function ProjectImage({ title, image, video, links }){
         alignItems: 'center',
       }}
     >
-      {/* check if there is a video or image */}
-      {image !== '' ? (
+      {/* check if there is a video or images */}
+      {images.length > 0 ? (
         <div style={styles.image}>
-          {/* check if there is a deployed link  */}
-          {links[1] ? (
-            // make image clickable and send to deployed site
-            <a
-              style={{ textDecoration: 'none', color: 'black' }}
-              href={links[1]}
-            >
-              <img
-                src={image}
-                style={{
-                  border: '4 black solid',
-                  borderRadius: 3,
-                
-                }}
-                height='100%'
-              />
-            </a>
-          ) : (
-            // return regular image
-            <img
-              src={image}
-              style={{ border: '4 black solid', borderRadius: 3 }}
-              height='100%'
-            />
-          )}
+          {images.map(image => {
+            return (
+              //check if there is a deployed link  
+              links[1] ? (
+                // make image clickable and send to deployed site
+                <a
+                  style={{ textDecoration: 'none', color: 'black' }}
+                  href={links[1]}
+                >
+                  <img
+                    src={image}
+                    style={styles.singleImage
+                    
+                    }
+                    height='100%'
+                  />
+                </a>
+               ) : (
+                // return regular image
+                <img
+                  src={image}
+                  style={styles.singleImage}
+                  height='100%'
+                />
+              )
+            )
+              }
+            )
+          }
         </div>
       ) : (
         <div style={styles.image}>{video}</div>
@@ -104,7 +108,7 @@ function ProjectInfo({ status, content, tech, links, notes }) {
   );
 }
 
-function Project({ title, image, video, status, links, content, tech, notes }){
+function Project({ title, images, video, status, links, content, tech, notes }){
   return (
     <div style={styles.container}>
       <div>
@@ -113,7 +117,7 @@ function Project({ title, image, video, status, links, content, tech, notes }){
       {/* <div style={styles.content}> */}
         <ProjectImage
           title={title}
-          image={image}
+          images={images}
           video={video}
           links={links}
         />
@@ -147,6 +151,12 @@ const styles = {
     display: 'block',
     height: '12em',
     width: 'auto',
+  },
+  singleImage: {
+    marginLeft: '2em',
+    marginRight: '2em',
+    border: '4 black solid',
+                      borderRadius: 3,
   },
   content: {
     paddingLeft: '10em',
