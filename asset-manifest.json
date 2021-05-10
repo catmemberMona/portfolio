@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4e57880f.chunk.css",
+    "main.css": "/portfolio/static/css/main.da7f6578.chunk.css",
     "main.js": "/portfolio/static/js/main.98ba2d86.chunk.js",
     "main.js.map": "/portfolio/static/js/main.98ba2d86.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.d5a51fbe.js",
@@ -10,7 +10,7 @@
     "static/js/3.91ba7783.chunk.js": "/portfolio/static/js/3.91ba7783.chunk.js",
     "static/js/3.91ba7783.chunk.js.map": "/portfolio/static/js/3.91ba7783.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.4e57880f.chunk.css.map": "/portfolio/static/css/main.4e57880f.chunk.css.map",
+    "static/css/main.da7f6578.chunk.css.map": "/portfolio/static/css/main.da7f6578.chunk.css.map",
     "static/js/2.a154c9fb.chunk.js.LICENSE.txt": "/portfolio/static/js/2.a154c9fb.chunk.js.LICENSE.txt",
     "static/media/bellTowerOff.e5e088b5.png": "/portfolio/static/media/bellTowerOff.e5e088b5.png",
     "static/media/bellTowerOn.a27bdbd8.png": "/portfolio/static/media/bellTowerOn.a27bdbd8.png",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.d5a51fbe.js",
     "static/js/2.a154c9fb.chunk.js",
-    "static/css/main.4e57880f.chunk.css",
+    "static/css/main.da7f6578.chunk.css",
     "static/js/main.98ba2d86.chunk.js"
   ]
 }
