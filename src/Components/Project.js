@@ -60,18 +60,34 @@ function ProjectImage({ title, images, video, links }){
 
 function ProjectInfo({ status, content, tech, links, notes }) {
   return (
-    <div style={styles.description, styles.content}>
+    <div style={(styles.description, styles.content)}>
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Status: </span>
         {status}
       </Typography>
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Links: </span>
+        {links.map((link) => {
+          console.log(link)
+          return (
+            <span>
+              {'   '}
+              🔗
+              <a
+                style={{ textDecoration: 'none', color: 'brown' }}
+                href={link.link}
+              >
+                {link.to}
+              </a>
+            </span>
+          );
+        }
+          
+          
+     
+        )}
 
-        <a style={{ textDecoration: 'none', color: 'brown' }} href={links[0]}>
-          Github
-        </a>
-        {links[1] && (
+        {/* {links[1] && (
           <span>
             {' '}
             |{' '}
@@ -82,7 +98,7 @@ function ProjectInfo({ status, content, tech, links, notes }) {
               Deployed Site
             </a>
           </span>
-        )}
+        )} */}
       </Typography>
       <Typography style={styles.spacing}>
         <div style={{ fontWeight: 800 }}>Description: </div>
@@ -92,7 +108,7 @@ function ProjectInfo({ status, content, tech, links, notes }) {
       </Typography>
       {notes.length > 0 && (
         <Typography style={styles.spacing}>
-          <span style={{ fontWeight: 800 }}>Notes: </span>
+          <span style={{ fontWeight: 800 }}>Notes:</span>
           <ul>
             {notes.map((note) => (
               <li style={styles.spacing}>{note}</li>
