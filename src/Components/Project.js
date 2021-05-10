@@ -87,18 +87,6 @@ function ProjectInfo({ status, content, tech, links, notes }) {
      
         )}
 
-        {/* {links[1] && (
-          <span>
-            {' '}
-            |{' '}
-            <a
-              style={{ textDecoration: 'none', color: 'brown' }}
-              href={links[1]}
-            >
-              Deployed Site
-            </a>
-          </span>
-        )} */}
       </Typography>
       <Typography style={styles.spacing}>
         <div style={{ fontWeight: 800 }}>Description: </div>
@@ -130,7 +118,6 @@ function Project({ title, images, video, status, links, content, tech, notes }){
       <div>
         <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
-      {/* <div style={styles.content}> */}
         <ProjectImage
           title={title}
           images={images}
@@ -144,8 +131,7 @@ function Project({ title, images, video, status, links, content, tech, notes }){
           links={links}
           notes={notes}
         />
-      {/* </div> */}
-    </div>
+      </div>
   );
 };
 
@@ -154,7 +140,6 @@ const styles = {
     display: 'flex',
     flex: 1,
     marginTop: '1.5em',
-    flexWrap: 'wrap',
     flexDirection: 'column',
   },
   projectTitle: {
@@ -172,7 +157,7 @@ const styles = {
     marginLeft: '2em',
     marginRight: '2em',
     border: '4 black solid',
-                      borderRadius: 3,
+    borderRadius: 3,
   },
   content: {
     paddingLeft: '10em',
