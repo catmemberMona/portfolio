@@ -10,8 +10,8 @@ function ProjectImage({ title, images, video, links }){
       style={{
         flex: 2,
         ...styles.content,
-        backgroundColor: 'rgba(43, 34, 7, .2)',
-        border: '.5px solid rgba(43, 34, 7, .3)',
+        backgroundColor: 'rgba(43, 34, 7, .3)',
+        boxShadow: 'inset 0 0 6px rgba(43, 34, 7, .5)',
         borderRadius: 5,
         display: 'flex',
         justifyContent: 'center',
@@ -21,35 +21,26 @@ function ProjectImage({ title, images, video, links }){
       {/* check if there is a video or images */}
       {images.length > 0 ? (
         <div style={styles.image}>
-          {images.map(image => {
+          {images.map((image) => {
             return (
-              //check if there is a deployed link  
+              //check if there is a deployed link
               links[1] ? (
                 // make image clickable and send to deployed site
                 <a
-                  style={{ textDecoration: 'none', color: 'black' }}
+                  style={{
+                    textDecoration: 'none',
+                    color: 'black',
+                  }}
                   href={links[1]}
                 >
-                  <img
-                    src={image}
-                    style={styles.singleImage
-                    
-                    }
-                    height='100%'
-                  />
+                  <img src={image} style={styles.singleImage} height='100%' />
                 </a>
-               ) : (
+              ) : (
                 // return regular image
-                <img
-                  src={image}
-                  style={styles.singleImage}
-                  height='100%'
-                />
+                <img src={image} style={styles.singleImage} height='100%' />
               )
-            )
-              }
-            )
-          }
+            );
+          })}
         </div>
       ) : (
         <div style={styles.image}>{video}</div>
@@ -156,8 +147,9 @@ const styles = {
   singleImage: {
     marginLeft: '2em',
     marginRight: '2em',
-    border: '4 black solid',
+    border: '1 black solid',
     borderRadius: 3,
+    boxShadow: '0 1px 15px rgba(43, 34, 7, .5)',
   },
   content: {
     paddingLeft: '10%',
