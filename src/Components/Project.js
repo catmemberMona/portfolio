@@ -9,7 +9,7 @@ function ProjectImage({ title, images, video, links }){
     <div
       style={{
         flex: 2,
-        ...styles.content,
+        ...styles.imageContent,
         backgroundColor: 'rgba(43, 34, 7, .3)',
         boxShadow: 'inset 0 0 6px rgba(43, 34, 7, .5)',
         borderRadius: 5,
@@ -23,22 +23,10 @@ function ProjectImage({ title, images, video, links }){
         <div style={styles.image}>
           {images.map((image) => {
             return (
-              //check if there is a deployed link
-              links[1] ? (
-                // make image clickable and send to deployed site
-                <a
-                  style={{
-                    textDecoration: 'none',
-                    color: 'black',
-                  }}
-                  href={links[1]}
-                >
-                  <img src={image} style={styles.singleImage} height='100%' />
-                </a>
-              ) : (
+           
                 // return regular image
                 <img src={image} style={styles.singleImage} height='100%' />
-              )
+          
             );
           })}
         </div>
@@ -140,13 +128,15 @@ const styles = {
     textAlign: 'center ',
   },
   image: {
-    display: 'block',
+    display: 'flex',
+    justifyContent: 'center',
     height: '12em',
     width: 'auto',
   },
   singleImage: {
-    marginLeft: '2em',
-    marginRight: '2em',
+    flex: 1,
+    marginLeft: '5%',
+    marginRight: '5%',
     border: '1 black solid',
     borderRadius: 3,
     boxShadow: '0 1px 15px rgba(43, 34, 7, .5)',
@@ -154,6 +144,12 @@ const styles = {
   content: {
     paddingLeft: '10%',
     paddingRight: '10%',
+    paddingTop: '3%',
+    paddingBottom: '3%',
+  },
+  imageContent: {
+    paddingLeft: '5%',
+    paddingRight: '5%',
     paddingTop: '3%',
     paddingBottom: '3%',
   },
