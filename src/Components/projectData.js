@@ -10,19 +10,37 @@ import bellTower2 from '../Images/bellTowerOff.png'
 export default [
   {
     title: "Mona's Portfolio",
-    status: 'Ongoing',
-    links: ['https://github.com/catmemberMona/portfolio'],
+    status: 'Ongoing | Deployed',
+    links: [
+      {
+        to: 'Github',
+        link: 'https://github.com/catmemberMona/portfolio',
+      },
+    ],
     content: [
       "Tell me this doesn't look more visually pleasing compared to looking at my resume.",
     ],
     notes: [],
     tech: 'Create-React-App, Material-UI, Github pages',
-    images: [portfolioImg,]
+    images: [portfolioImg],
   },
   {
     title: 'Hourly Bell Tower',
-    status: 'Ongoing',
-    links: ['https://github.com/catmemberMona/clockTowerBellReminderIOS'],
+    status: 'Ongoing | Beta Testing | Deployed',
+    links: [
+      {
+        to: 'Github',
+        link: 'https://github.com/catmemberMona/clockTowerBellReminderIOS',
+      },
+      {
+        to: 'TestFlight',
+        link: 'https://testflight.apple.com/join/Dny44tK0',
+      },
+      {
+        to: 'Apple Store',
+        link: 'https://apps.apple.com/app/hourly-bell-tower/id1564141557',
+      },
+    ],
     content: [
       'Time flows forward and the speed of time does not change for individuals.',
       'Hourly Bell Tower reminds users that time is always moving forward. A bell will ring every hour every day, starting the user’s day with a set first bell and ending the day with the last bell.',
@@ -30,7 +48,10 @@ export default [
       `A bell will sound for each notification, reminding the user an hour has past. Users can turn the notifications and sound off by tapping the screen and turn them back on by tapping the screen when needed. \n
         The user interface will change depending on if it is set to an on or off state.`,
     ],
-    notes: ["Currently being reviewed to be published to Apple's App Store"],
+    notes: [
+      'Version 1 is published to the App Store',
+      'Version 2 is in beta testing - install TestFlight on your IOS device before clicking on the TestFlight Link',
+    ],
     tech: 'Swift, Uikit',
     images: [bellTower, bellTower2],
   },
@@ -38,8 +59,14 @@ export default [
     title: 'Memory Maddening',
     status: 'Completed | Deployed',
     links: [
-      'https://github.com/Jam52/mintbean-typing-karaoke',
-      'https://memorymaddening.herokuapp.com/',
+      {
+        to: 'Github',
+        link: 'https://github.com/Jam52/mintbean-typing-karaoke',
+      },
+      {
+        to: 'Deployed site',
+        link: 'https://memorymaddening.herokuapp.com/',
+      },
     ],
     content: [
       'Tests your memory and typing skills. The user will see a card that displays a word before being flipped. The user will then quickly and accurately type the word before the card flips again, showing a new word.',
@@ -54,12 +81,21 @@ export default [
   {
     title: 'Diamond Memory Game',
     status: 'Ongoing',
-    links: ['https://github.com/catmemberMona/simon-says'],
+    links: [
+      {
+        to: 'Github',
+        link: 'https://github.com/catmemberMona/simon-says',
+      },
+      {
+        to: 'TestFlight',
+        link: 'https://testflight.apple.com/join/gXU6yfi4',
+      },
+    ],
     content: [
       'I was reminded of this good childhood game when I was playing the current popular game AmongUs. So I created a mobile version of it.',
     ],
     notes: [
-      'It is currently not deployed, but will contain updates and be packaged to apple TestFlight in the future.',
+      "Currently available for beta testing on Apple's TestFlight App - install TestFlight on your IOS device before clicking on the TestFlight Link",
     ],
     tech: 'React-Native, React, Async-Storage, React-Native-Sound',
     images: [simon1, simon2, simon3],
@@ -67,7 +103,12 @@ export default [
   {
     title: 'scavengARescape',
     status: 'Completed',
-    links: ['https://github.com/Capstone-E/ScavengAR-Escape'],
+    links: [
+      {
+        to: 'Github',
+        link: 'https://github.com/Capstone-E/ScavengAR-Escape',
+      },
+    ],
     content: [
       'Enter portals and collect keys, all through the use of your mobile device and your body. This game was the starting point for my mobile development. ScavengARescape is my capstone project when attending FullStack Academy. Created with three of my fellow classmates: Kali, Ashley, and Kristi.',
     ],
