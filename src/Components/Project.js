@@ -7,16 +7,7 @@ import {
 function ProjectImage({ title, images, video, links }){
   return (
     <div
-      style={{
-        flex: 2,
-        ...styles.imageContent,
-        backgroundColor: 'rgba(43, 34, 7, .3)',
-        boxShadow: 'inset 0 0 6px rgba(43, 34, 7, .5)',
-        borderRadius: 5,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
+      style={styles.imageContent }
     >
       {/* check if there is a video or images */}
       {images.length > 0 ? (
@@ -25,7 +16,7 @@ function ProjectImage({ title, images, video, links }){
             return (
            
                 // return regular image
-                <img src={image} style={styles.singleImage} height='100%' />
+                <img class='projectImg' src={image} style={styles.singleImage} height='100%' />
           
             );
           })}
@@ -152,6 +143,13 @@ const styles = {
     paddingRight: '5%',
     paddingTop: '3%',
     paddingBottom: '3%',
+    backgroundColor: 'rgba(43, 34, 7, .3)',
+    boxShadow: 'inset 0 0 6px rgba(43, 34, 7, .5)',
+    borderRadius: 5,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 2
   },
   description: {
     display: 'flex',
