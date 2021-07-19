@@ -3,11 +3,28 @@ import memory from '../Images/memory.png'
 import simon1 from '../Images/simonStart.png'
 import simon2 from '../Images/simon2.png'
 import simon3 from '../Images/simon1.png'
-import bellTower from '../Images/bellTowerOn.png'
-import bellTower2 from '../Images/bellTowerOff.png'
+import comingSoon from '../Images/coming-soon.png'
 
 
 export default [
+  {
+    title: "Plus One",
+    status: 'Ongoing',
+    links: [
+      {
+        to: 'Github',
+        link: 'https://github.com/catmemberMona/relatabilityPoll',
+      },
+    ],
+    content: [
+      "Plus One is an application for users to view and react to statements. They can also see how other users have reacted.",
+      "Plus One is still being worked on. I used Figma to create the design for my application, and sketched wireframes using a notebook and pen.",
+      "At this moment, users whom haven't logged in can see a list of statement cards with information that is retrieved from the cloud database, Firebase Firestore. I've also integrated Google Sign - In for users to create an account with my application."
+    ],
+    notes: [],
+    tech: 'Swift, UIKit, XCTest, Google Sign-In, Firebase Firestore, App Center',
+    images: [comingSoon],
+  },
   {
     title: "Mona's Portfolio",
     status: 'Ongoing | Deployed',
@@ -26,7 +43,7 @@ export default [
   },
   {
     title: 'Hourly Bell Tower',
-    status: 'Ongoing | Beta Testing | Deployed',
+    status: 'Completed | Deployed',
     links: [
       {
         to: 'Github',
@@ -49,11 +66,22 @@ export default [
         The user interface will change depending on if it is set to an on or off state.`,
     ],
     notes: [
-      'Version 1 is published to the App Store',
-      'Version 2 is in beta testing - install TestFlight on your IOS device before clicking on the TestFlight Link',
+      'Version with onboarding/introduction scene is up on TestFlight - install TestFlight on your IOS device before clicking on the TestFlight Link',
     ],
     tech: 'Swift, Uikit',
-    images: [bellTower, bellTower2],
+    images: [],
+    video: (
+      <iframe
+        display='block'
+        width='100%'
+        height='100%'
+        src="https://www.youtube.com/embed/4-waVSHXh4s"
+        title="YouTube video player"
+        frameborder="0"
+        allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;'
+        allowfullscreen>
+      </iframe>
+    )
   },
   {
     title: 'Memory Maddening',

@@ -8,3 +8,6 @@ This was created to introduce Mona and help you become more familiar with her pr
 - Continuous Integration - CircleCI  
 - Material-UI - Styling componenets 
 - Deployment - Github Pages
+
+## Resources
+- Coming Soon Image by priyampatel4 on pixabay
