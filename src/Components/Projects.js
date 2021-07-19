@@ -46,7 +46,6 @@ const styles = {
     borderTop: '0.5px solid rgba(43, 34, 7, .1)',
     borderBottom: '0.5px solid rgba(43, 34, 7, .1)',
     marginTop: '5em',
-    marginBottom: '2em',
     paddingBottom: '1em',
   },
 };

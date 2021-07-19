@@ -19,6 +19,7 @@ import Nav from './Nav';
 import Me from './Me'
 import AboutMe from './AboutMe'
 import Projects from './Projects'
+import Footer from './Footer'
 
 function Main(props) {
   const classes = useStyles();
@@ -43,6 +44,7 @@ function Main(props) {
       <AboutMe avatarImages={{ mona, linkedin, github }} />
       {/* Projects Section  */}
       <Projects />
+      <Footer avatarImages={{ mona, linkedin, github }} />
     </div>
   );
 }
