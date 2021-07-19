@@ -42,7 +42,7 @@ const styles = {
     fontSize: '3em',
   },
   projectsContainer: {
-    backgroundColor: 'rgba(43, 34, 7, .2)',
+    backgroundColor: 'rgba(6, 14, 58, 0.2)',
     borderTop: '0.5px solid rgba(43, 34, 7, .1)',
     borderBottom: '0.5px solid rgba(43, 34, 7, .1)',
     marginTop: '5em',
