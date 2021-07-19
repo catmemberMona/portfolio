@@ -41,20 +41,19 @@ const useStyles = makeStyles((theme) => ({
   extraLarge: {
     marginTop: theme.spacing(2),
     width: '100%',
-    height: 260,
-    minHeight: 210,
+    height: 170,
+    minHeight: 150,
   },
   smallText: {
     marginTop: '.5em',
     fontWeight: 400,
-    // padding: '.35em',
     fontSize: '.8em',
   },
   heading: {
-    marginTop: '.5em',
+    marginTop: '1em',
     fontWeight: 400,
-    padding: '.35em',
-    fontSize: '7em',
+    padding: '.7em',
+    fontSize: '6.5em',
   },
 }));
 

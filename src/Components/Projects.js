@@ -40,9 +40,10 @@ const styles = {
     paddingTop: '1.5em',
     fontWeight: 600,
     fontSize: '3em',
+    color: "lightgrey"
   },
   projectsContainer: {
-    backgroundColor: 'rgba(6, 14, 58, 0.2)',
+    backgroundColor: 'rgba(0, 4, 39, 0.9)',
     borderTop: '0.5px solid rgba(43, 34, 7, .1)',
     borderBottom: '0.5px solid rgba(43, 34, 7, .1)',
     marginTop: '5em',

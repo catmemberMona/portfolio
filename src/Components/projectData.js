@@ -1,4 +1,4 @@
-import portfolioImg from '../Images/portfolioImg.png'
+import portfolioImg from '../Images/portfolioImg1.png'
 import memory from '../Images/memory.png'
 import simon1 from '../Images/simonStart.png'
 import simon2 from '../Images/simon2.png'
