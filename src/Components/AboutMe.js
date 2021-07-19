@@ -18,7 +18,7 @@ function AboutMe(props) {
 
   return (
     <div id='aboutMe' className={classes.aboutMe} style={{ maxWidth: 1200 }}>
-      <Container maxWidth={false} >
+      <Container maxWidth={false}>
         <Typography className={classes.subHeading}>About Mona</Typography>
         <div
           style={{ maxWidth: 900, marginRight: 'auto' }}
@@ -46,21 +46,43 @@ function AboutMe(props) {
             </Typography>
           </Typography>
           <Typography className={classes.subHeadingTwo}>
-            Programming Interests
+            How I Started
+          </Typography>
+          <Typography style={{ marginBottom: '1em' }} variant='body1'>
+            I started coding after becoming curious about Virtual
+            Reality/Augmented Reality applications, and I wanted to know how to
+            create them. As someone that didn’t know much about tech and how to
+            get started, I decided to start with web development instead. Since
+            then, I learned javascript on my own and then attended a bootcamp
+            for full stack web development. I practiced the tech I learned by
+            working on projects and collaborating in group projects. Currently
+            I’m working on my own web and mobile applications.
+          </Typography>
+          <Typography className={classes.subHeadingTwo}>
+            Short Term Goals - IOS Mobile Development
           </Typography>
           <Typography variant='body1'>
-            Robotics would be my long term goal, but something that I currently
-            want to dive deeper into would be mobile applications, ios
-            specifically. One reason would be because I myself enjoy leaving my
-            house and using applications on the go.
+            One reason would be because I myself enjoy leaving my house and
+            using applications on my phone. The main reason is that mobile
+            phones have more versatility in what they can do, especially
+            with how portable they are.
+          </Typography>
+          <Typography className={classes.subHeadingTwo}>
+            Long Term Goal - Robotics and Machine Learning
+          </Typography>
+          <Typography variant='body1'>
+            Even though I still think that working with virtual
+            reality/augmented reality applications would be interesting, I feel
+            that progressing towards robotics and using machine learning is more
+            in line with what I want to work on to make a positive impact for
+            people.
           </Typography>
           <Typography className={classes.subHeadingTwo}>
             Personal Interests
           </Typography>
           <Typography variant='body1'>
             In my free time, I enjoy reading novels, taking walks in the park
-            during a sunny day, and casual games. A new interest is staring at
-            the line in stocks as it goes up and down and curved.
+            during a sunny day, and casual games.
           </Typography>
         </div>
       </Container>

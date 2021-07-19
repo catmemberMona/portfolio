@@ -7,49 +7,19 @@ import {
 function ProjectImage({ title, images, video, links }){
   return (
     <div
-      style={{
-        flex: 2,
-        ...styles.content,
-        backgroundColor: 'rgba(43, 34, 7, .2)',
-        border: '.5px solid rgba(43, 34, 7, .3)',
-        borderRadius: 5,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
+      style={styles.imageContent }
     >
       {/* check if there is a video or images */}
       {images.length > 0 ? (
         <div style={styles.image}>
-          {images.map(image => {
+          {images.map((image) => {
             return (
-              //check if there is a deployed link  
-              links[1] ? (
-                // make image clickable and send to deployed site
-                <a
-                  style={{ textDecoration: 'none', color: 'black' }}
-                  href={links[1]}
-                >
-                  <img
-                    src={image}
-                    style={styles.singleImage
-                    
-                    }
-                    height='100%'
-                  />
-                </a>
-               ) : (
+           
                 // return regular image
-                <img
-                  src={image}
-                  style={styles.singleImage}
-                  height='100%'
-                />
-              )
-            )
-              }
-            )
-          }
+                <img class='projectImg' src={image} style={styles.singleImage} height='100%' />
+          
+            );
+          })}
         </div>
       ) : (
         <div style={styles.image}>{video}</div>
@@ -87,18 +57,6 @@ function ProjectInfo({ status, content, tech, links, notes }) {
      
         )}
 
-        {/* {links[1] && (
-          <span>
-            {' '}
-            |{' '}
-            <a
-              style={{ textDecoration: 'none', color: 'brown' }}
-              href={links[1]}
-            >
-              Deployed Site
-            </a>
-          </span>
-        )} */}
       </Typography>
       <Typography style={styles.spacing}>
         <div style={{ fontWeight: 800 }}>Description: </div>
@@ -130,7 +88,6 @@ function Project({ title, images, video, status, links, content, tech, notes }){
       <div>
         <Typography style={styles.projectTitle}>{title}</Typography>
       </div>
-      {/* <div style={styles.content}> */}
         <ProjectImage
           title={title}
           images={images}
@@ -144,8 +101,7 @@ function Project({ title, images, video, status, links, content, tech, notes }){
           links={links}
           notes={notes}
         />
-      {/* </div> */}
-    </div>
+      </div>
   );
 };
 
@@ -154,7 +110,6 @@ const styles = {
     display: 'flex',
     flex: 1,
     marginTop: '1.5em',
-    flexWrap: 'wrap',
     flexDirection: 'column',
   },
   projectTitle: {
@@ -164,27 +119,42 @@ const styles = {
     textAlign: 'center ',
   },
   image: {
-    display: 'block',
+    display: 'flex',
+    justifyContent: 'center',
     height: '12em',
     width: 'auto',
   },
   singleImage: {
-    marginLeft: '2em',
-    marginRight: '2em',
-    border: '4 black solid',
-                      borderRadius: 3,
+    flex: 1,
+    marginLeft: '5%',
+    marginRight: '5%',
+    border: '1 black solid',
+    borderRadius: 3,
+    boxShadow: '0 1px 15px rgba(43, 34, 7, .5)',
   },
   content: {
-    paddingLeft: '10em',
-    paddingRight: '10em',
-    paddingTop: '2em',
-    paddingBottom: '2em',
+    paddingLeft: '10%',
+    paddingRight: '10%',
+    paddingTop: '3%',
+    paddingBottom: '3%',
+  },
+  imageContent: {
+    paddingLeft: '5%',
+    paddingRight: '5%',
+    paddingTop: '3%',
+    paddingBottom: '3%',
+    backgroundColor: 'rgba(43, 34, 7, .3)',
+    boxShadow: 'inset 0 0 6px rgba(43, 34, 7, .5)',
+    borderRadius: 5,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 2
   },
   description: {
     display: 'flex',
     flexDirection: 'column',
     flex: 3,
-    // minWidth: 300,
     justifyContent: 'center',
     maxWidth: 800,
   },
