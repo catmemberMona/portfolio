@@ -20,7 +20,9 @@ code {
     transition:transform 1.5s ease;
 }
 
-.projectImg:hover {
-    -webkit-transform:scale(2.5); /* or some other value */
-    transform:scale(2.5);
-}
+/* .projectImg:hover {
+    -webkit-transform:scale(2.5);  //or some other value 
+    transform:scale(2.5); 
+} 
+*/
+
