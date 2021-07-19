@@ -11,7 +11,7 @@ import {
   AppBar,
   Link,
 } from '@material-ui/core';
-import mona from '../Images/mona.jpeg';
+import mona from '../Images/mona.jpg';
 import linkedin from '../Images/linkedin.png';
 import github from '../Images/github.png';
 

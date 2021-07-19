@@ -19,7 +19,7 @@ function Me(props) {
       </div>
       <Container maxWidth={false}>
         <Typography align='center' className={classes.heading}>
-          Mona Zheng
+          name: "Mona Zheng"
         </Typography>
       </Container>
       <Container maxWidth={false}>
@@ -29,6 +29,9 @@ function Me(props) {
           variant='square'
           className={classes.extraLarge}
         />
+         <Typography align='left' className={classes.smallText}>
+          <i>Mona's Feet</i> at Coney Island Beach 2019
+        </Typography>
       </Container>
     </div>
   );
@@ -38,8 +41,14 @@ const useStyles = makeStyles((theme) => ({
   extraLarge: {
     marginTop: theme.spacing(2),
     width: '100%',
-    height: 560,
-    minHeight: 510,
+    height: 260,
+    minHeight: 210,
+  },
+  smallText: {
+    marginTop: '.5em',
+    fontWeight: 400,
+    // padding: '.35em',
+    fontSize: '.8em',
   },
   heading: {
     marginTop: '.5em',
