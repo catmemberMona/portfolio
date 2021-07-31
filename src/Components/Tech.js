@@ -29,6 +29,8 @@ let styles = {
   content: {
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
+    margin: '5vw'
   },
   row: {
     display: 'flex',
