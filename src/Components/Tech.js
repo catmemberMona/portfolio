@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '@material-ui/core';
+import { Avatar, Card } from '@material-ui/core';
 
 import metalbg from '../Images/metalbground.jpeg'
 import {
@@ -102,9 +102,17 @@ const Tech = () => {
       {technology.map(row => {
         return (
           <div style={styles.row}>
-            {row.map(tech => {
-              return tech ? (
-                <Avatar style={styles.techSize} src={tech} variant='rounded' />
+            {row.map(image => {
+              return image ? (
+                <Card style={styles.techSize}>
+                  {image !== metalbg ? (
+                    <img src={image}  
+                      style={styles.tech}
+                    />
+                  ) : (
+                    <img src={image} style={styles.metal} />
+                  )}
+                </Card>
               ) : (
                 <div style={styles.space} />
               );
@@ -131,15 +139,22 @@ let styles = {
     width: 'max(3vw, 20px)',
     height: 'max(3vw, 20px)',
     margin: '.2vw',
-    // backgroundColor: 'darkgrey',
-    // border: '1px darkGrey solid',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  tech: {
+    flex: 1,
+    margin: '.2vw',
+    borderRadius: 5,
+  },
+  metal: {
+    backgroundImage: `url(${metalbg})`,
+    flex: 1,
   },
   space: {
     width: 'max(3vw, 20px)',
     height: 'max(3vw, 20px)',
     margin: '.2vw',
-    // backgroundColor: 'rgba(0, 4, 39, 0.9)',
-    // border: '1px darkGrey solid',
   },
 };
 
