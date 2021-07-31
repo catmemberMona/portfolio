@@ -12,7 +12,7 @@ const Tech = () => {
           <div style={styles.row}>
             {row.map(image => {
               return image ? (
-                <Card style={styles.techSize}>
+                <Card style={styles.techSize} raised={true}>
                   {image !== metalbg ? (
                     <img src={image}  
                       style={styles.tech}
@@ -58,6 +58,7 @@ let styles = {
   metal: {
     backgroundImage: `url(${metalbg})`,
     flex: 1,
+    border: '.5px solid darkgrey',
   },
   space: {
     width: 'max(3vw, 20px)',
