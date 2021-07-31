@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import water from '../Images/water.jpeg';
 
-function Me(props) {
+function Me() {
   const classes = useStyles();
 
   return (

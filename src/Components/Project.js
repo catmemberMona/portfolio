@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 
 
-function ProjectImage({ title, images, video, links }){
+function ProjectImage({images, video }){
   return (
     <div
       style={styles.imageContent }

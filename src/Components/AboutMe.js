@@ -1,8 +1,6 @@
 import React from 'react';
 import {
-  Grid,
   makeStyles,
-  Avatar,
   Typography,
   Container,
 } from '@material-ui/core';
@@ -12,8 +10,6 @@ import {
 
 
 function AboutMe(props) {
-  const { linkedin, github } = props.avatarImages;
-
   const classes = useStyles();
 
   return (
