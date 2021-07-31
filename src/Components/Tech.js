@@ -97,9 +97,9 @@ const Tech = () => {
           <div style={styles.row}>
             {row.map(tech => {
               return tech ? (
-                <Avatar style={styles.techSize}>{tech}</Avatar>
+                <Avatar style={styles.techSize} variant='rounded'>{tech}</Avatar>
               ) : (
-                <div style={styles.techSize} />
+                <div style={styles.space} />
               );
             })}
           </div>)
@@ -123,6 +123,14 @@ let styles = {
   techSize: {
     width: 'max(3vw, 20px)',
     height: 'max(3vw, 20px)',
+    margin: '.2vw',
+    backgroundColor: 'darkgrey',
+  },
+  space: {
+    width: 'max(3vw, 20px)',
+    height: 'max(3vw, 20px)',
+    margin: '.2vw',
+    backgroundColor: 'darkgrey',
   },
 };
 
