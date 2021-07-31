@@ -1,9 +1,11 @@
 import React from 'react';
 import { Avatar } from '@material-ui/core';
 
+import metalbg from '../Images/metalbground.jpeg'
+
 let technology = [
   [
-    1,
+    metalbg,
     2,
     3,
     undefined,
@@ -97,7 +99,7 @@ const Tech = () => {
           <div style={styles.row}>
             {row.map(tech => {
               return tech ? (
-                <Avatar style={styles.techSize} variant='rounded'>{tech}</Avatar>
+                <Avatar style={styles.techSize} src={tech} variant='rounded' />
               ) : (
                 <div style={styles.space} />
               );
