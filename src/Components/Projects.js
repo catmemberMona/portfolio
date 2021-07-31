@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Divider,
   Container,
   Typography,
   Paper

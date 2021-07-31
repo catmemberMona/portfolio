@@ -130,7 +130,7 @@ let styles = {
     width: 'max(3vw, 20px)',
     height: 'max(3vw, 20px)',
     margin: '.2vw',
-    backgroundColor: 'darkgrey',
+    backgroundColor: 'rgba(0, 4, 39, 0.9)',
   },
 };
 
