@@ -12,5 +12,7 @@ This was created to introduce Mona and help you become more familiar with her pr
 ## Resources
 - Coming Soon Image by priyampatel4 on pixabay
 - [Metal BackGround Image]
+- [Tech Stack Images from icon-icons.com]
 
+[Tech Stack Images from icon-icons.com]: https://icon-icons.com/
 [Metal BackGround Image]: https://p1.pxfuel.com/preview/292/57/219/metal-background-metallic-metallic-background-steel.jpg
