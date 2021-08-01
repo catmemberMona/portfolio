@@ -5,27 +5,41 @@ import metalbg from '../Images/metalbground.jpeg'
 import technology from '../Images/techImages'
 
 const Tech = () => {
+  let techCount = technology.length
   return (
     <div style={styles.content}>
       {technology.map(row => {
         return (
-          <div style={styles.row}>
-            {row.map(image => {
+          <div style={styles.row} key={(techCount -= 1)}>
+            {row.map((image) => {
               return image ? (
-                <Card style={styles.techSize} raised={true}>
+                <Card
+                  style={styles.techSize}
+                  raised={true}
+                  key={(techCount -= 1)}
+                >
                   {image !== metalbg ? (
-                    <img src={image}  
+                    <img
+                      alt=''
+                      src={image}
                       style={styles.tech}
+                      key={(techCount -= 1)}
                     />
                   ) : (
-                    <img src={image} style={styles.metal} />
+                    <img
+                      alt=''
+                      src={image}
+                      style={styles.metal}
+                      key={(techCount -= 1)}
+                    />
                   )}
                 </Card>
               ) : (
-                <div style={styles.space} />
+                <div style={styles.space} key={(techCount -= 1)} />
               );
             })}
-          </div>)
+          </div>
+        );
       })}
 
     </div>

@@ -21,7 +21,7 @@ function AboutMe(props) {
           className={classes.contentText && classes.spacing}
         >
           <Typography className={classes.subHeadingTwo}>Programming</Typography>
-          <Typography variant='body1'>
+          <div variant='body1'>
             <Typography className={classes.quotes}>
               "Machines will take over the world."
             </Typography>
@@ -40,7 +40,7 @@ function AboutMe(props) {
               do I want to program? Instead the question would be, how could I
               not.
             </Typography>
-          </Typography>
+          </div>
           <Typography className={classes.subHeadingTwo}>
             How I Started
           </Typography>

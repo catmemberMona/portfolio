@@ -6,9 +6,9 @@ import simon3 from '../Images/simon1.png'
 import comingSoon from '../Images/coming-soon.png'
 
 
-export default [
+let topics = [
   {
-    title: "Plus One",
+    title: 'Plus One',
     status: 'Ongoing',
     links: [
       {
@@ -17,9 +17,9 @@ export default [
       },
     ],
     content: [
-      "Plus One is an application for users to view and react to statements. They can also see how other users have reacted.",
-      "Plus One is still being worked on. I used Figma to create the design for my application, and sketched wireframes using a notebook and pen.",
-      "At this moment, users whom haven't logged in can see a list of statement cards with information that is retrieved from the cloud database, Firebase Firestore. I've also integrated Google Sign - In for users to create an account with my application."
+      'Plus One is an application for users to view and react to statements. They can also see how other users have reacted.',
+      'Plus One is still being worked on. I used Figma to create the design for my application, and sketched wireframes using a notebook and pen.',
+      "At this moment, users whom haven't logged in can see a list of statement cards with information that is retrieved from the cloud database, Firebase Firestore. I've also integrated Google Sign - In for users to create an account with my application.",
     ],
     notes: [],
     tech: 'Swift, UIKit, XCTest, Google Sign-In, Firebase Firestore, App Center',
@@ -75,13 +75,13 @@ export default [
         display='block'
         width='100%'
         height='100%'
-        src="https://www.youtube.com/embed/4-waVSHXh4s"
-        title="YouTube video player"
-        frameborder="0"
-        allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;'
-        allowfullscreen>
-      </iframe>
-    )
+        src='https://www.youtube.com/embed/4-waVSHXh4s'
+        title='YouTube video player'
+        frameBorder='0'
+        allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;'
+        allowFullScreen
+      ></iframe>
+    ),
   },
   {
     title: 'Memory Maddening',
@@ -99,11 +99,10 @@ export default [
     content: [
       'Tests your memory and typing skills. The user will see a card that displays a word before being flipped. The user will then quickly and accurately type the word before the card flips again, showing a new word.',
       'This is a web browser game created with a team during the Mintbean weekly learnathon challenge. Completed with teammates Jamie and Scott.',
-      ,
+      
     ],
     notes: ['This game is not supported on the mobile browser.'],
-    tech:
-      'React, CSS, Material-UI, React-Card-Flip, React-Countdown-Hook, React-Router-DOM, Random-Word-Api, Axios',
+    tech: 'React, CSS, Material-UI, React-Card-Flip, React-Countdown-Hook, React-Router-DOM, Random-Word-Api, Axios',
     images: [memory],
   },
   {
@@ -150,9 +149,11 @@ export default [
         height='100%'
         src='https://www.youtube-nocookie.com/embed/VGoNcz_78Ns'
         title='YouTube video player'
-        frameborder='0'
+        frameBorder='0'
         allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
       ></iframe>
     ),
   },
 ];
+
+export default topics

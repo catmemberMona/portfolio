@@ -8,6 +8,7 @@ import topics from './projectData'
 import Project from './Project';
 
 function Projects() {
+  let keyCount = 0;
   return (
     <div style={styles.projectsContainer}>
       <div id='projects' style={{ maxWidth: 1200, margin: 'auto' }}>
@@ -19,7 +20,7 @@ function Projects() {
             <div style={{flex:5}}>
               {topics.map((topic) => {
                 return (
-                  <div style={{ marginTop: '1em' }}>
+                  <div style={{ marginTop: '1em' }} key={keyCount+=1}>
                     <Paper style={{ padding: '2em' }}>
                       <Project {...topic} />
                     </Paper>

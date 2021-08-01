@@ -19,7 +19,7 @@ import xcodeImg from './xcode.png'
 import metalbg from '../metalbground.jpeg'
 
 
-export default [
+let technology = [
   [
     metalbg,
     metalbg,
@@ -106,3 +106,5 @@ export default [
     metalbg,
   ],
 ];
+
+export default technology
