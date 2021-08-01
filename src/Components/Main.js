@@ -1,15 +1,6 @@
 import React from 'react';
 import {
-  Grid,
   makeStyles,
-  Avatar,
-  Typography,
-  Box,
-  Container,
-  Tabs,
-  Tab,
-  AppBar,
-  Link,
 } from '@material-ui/core';
 import mona from '../Images/mona.jpg';
 import linkedin from '../Images/linkedin.png';
@@ -20,8 +11,9 @@ import Me from './Me'
 import AboutMe from './AboutMe'
 import Projects from './Projects'
 import Footer from './Footer'
+import Tech from './Tech'
 
-function Main(props) {
+function Main() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -41,18 +33,18 @@ function Main(props) {
       {/* Mona Name and Image first Look Section */}
       <Me avatarImage={mona} />
       {/* About Mona Section */}
-      <AboutMe avatarImages={{ mona, linkedin, github }} />
+      <AboutMe avatarImages={{ mona }} />
+      <Tech />
       {/* Projects Section  */}
       <Projects />
-      <Footer avatarImages={{ mona, linkedin, github }} />
+      <Footer avatarImages={{ linkedin, github }} />
     </div>
   );
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    // margin: '1em',
   },
 }));
 

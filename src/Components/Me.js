@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import water from '../Images/water.jpeg';
 
-function Me(props) {
+function Me() {
   const classes = useStyles();
 
   return (
@@ -18,7 +18,7 @@ function Me(props) {
         Just spacing
       </div>
       <Container maxWidth={false}>
-        <Typography align='left' className={[classes.heading, classes.topText]}>
+        <Typography align='left' className={classes.topText}>
           <span className={classes.key}>name:</span> Mona Zheng
         </Typography>
         <Typography align='left' className={classes.heading}>
@@ -61,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
   },
   topText: {
     marginTop: '3em',
+    fontWeight: 400,
+    padding: '1vh',
+    fontSize: 'max(3.5vw, 30px)',
   },
   heading: {
     fontWeight: 400,

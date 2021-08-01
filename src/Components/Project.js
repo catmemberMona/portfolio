@@ -4,31 +4,38 @@ import {
 } from '@material-ui/core';
 
 
-function ProjectImage({ title, images, video, links }){
+function ProjectImage({ images, video }) {
+  let imagesCount = images.length
   return (
-    <div
-      style={styles.imageContent }
-    >
+    <div style={styles.imageContent}>
       {/* check if there is a video or images */}
       {images.length > 0 ? (
         <div style={styles.image}>
           {images.map((image) => {
             return (
-           
-                // return regular image
-                <img class='projectImg' src={image} style={styles.singleImage} height='100%' />
-          
+              // return regular image
+              <img
+                alt={image}
+                className='projectImg'
+                src={image}
+                style={styles.singleImage}
+                height='100%'
+                key={(imagesCount -= 1)}
+              />
             );
           })}
         </div>
       ) : (
-        <div style={styles.image}>{video}</div>
+        <div style={styles.image}>
+          {video}
+        </div>
       )}
     </div>
   );
 };
 
 function ProjectInfo({ status, content, tech, links, notes }) {
+  let keyCount = 0
   return (
     <div style={(styles.description, styles.content)}>
       <Typography style={styles.spacing}>
@@ -38,9 +45,8 @@ function ProjectInfo({ status, content, tech, links, notes }) {
       <Typography style={styles.spacing}>
         <span style={{ fontWeight: 800 }}>Links: </span>
         {links.map((link) => {
-          console.log(link)
           return (
-            <span>
+            <span key={keyCount+=1}>
               {'   '}
               🔗
               <a
@@ -51,27 +57,24 @@ function ProjectInfo({ status, content, tech, links, notes }) {
               </a>
             </span>
           );
-        }
-          
-          
-     
-        )}
-
+        })}
       </Typography>
-      <Typography style={styles.spacing}>
-        <div style={{ fontWeight: 800 }}>Description: </div>
+      <div style={styles.spacing}>
+        <div style={{ fontWeight: 800}}>Description: </div>
         {content.map((paragraph) => (
-          <Typography style={styles.spacing}>{paragraph}</Typography>
+          <Typography style={styles.spacing} key={keyCount+=1}>
+            {paragraph}
+          </Typography>
         ))}
-      </Typography>
+      </div>
       {notes.length > 0 && (
         <Typography style={styles.spacing}>
-          <span style={{ fontWeight: 800 }}>Notes:</span>
-          <ul>
+          <span style={{ fontWeight: 800, display: 'block' }}>Notes:</span>
             {notes.map((note) => (
-              <li style={styles.spacing}>{note}</li>
+              <span display='block' style={{ ...styles.spacing, display: 'block' }} key={keyCount+=1}>
+                {note}
+              </span>
             ))}
-          </ul>
         </Typography>
       )}
       <Typography style={styles.spacing}>

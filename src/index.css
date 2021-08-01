@@ -20,12 +20,3 @@ code {
     transition:transform 1.5s ease;
 }
 
-/* .projectImg:hover {
-    -webkit-transform:scale(2.5);  //or some other value 
-    transform:scale(2.5); 
-} 
-*/
-
-div {
-  /* background-color: rgba(0, 4, 39, 0.4); */
-}
