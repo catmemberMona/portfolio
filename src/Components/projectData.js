@@ -26,6 +26,40 @@ let topics = [
     images: [comingSoon],
   },
   {
+    title: 'Elemental Poker',
+    status: 'Ongoing',
+    links: [
+      {
+        to: 'Github',
+        link: 'https://github.com/catmemberMona/chinese-poker',
+      },
+      {
+        to: 'Game Page',
+        link: 'https://catmembermona.github.io/chinese-poker/',
+      },
+    ],
+    content: [
+      'Elemental Poker is a single player game where the user competes with the computer. Win by playing all the cards in your hand.',
+      'It is based on a traditional chinese card game. Traditionally chinese poker is usually played with 2-4 players with a deck of 52 cards.',
+      'Elemental Poker was created during a weekly hackathon hosted by MintBean. Mintbean provides a supportive community for software developers. Check them out!',
+    ],
+    notes: [],
+    tech: 'Create-React-App, Redux, React-Redux, Material-UI',
+    images: [],
+    video: (
+      <iframe
+        display='block'
+        width='100%'
+        height='100%'
+        src='https://www.youtube.com/embed/z35qjrkX_CY'
+        title='YouTube video player'
+        frameBorder='0'
+        allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;'
+        allowFullScreen
+      ></iframe>
+    ),
+  },
+  {
     title: "Mona's Portfolio",
     status: 'Ongoing | Deployed',
     links: [
@@ -99,7 +133,6 @@ let topics = [
     content: [
       'Tests your memory and typing skills. The user will see a card that displays a word before being flipped. The user will then quickly and accurately type the word before the card flips again, showing a new word.',
       'This is a web browser game created with a team during the Mintbean weekly learnathon challenge. Completed with teammates Jamie and Scott.',
-      
     ],
     notes: ['This game is not supported on the mobile browser.'],
     tech: 'React, CSS, Material-UI, React-Card-Flip, React-Countdown-Hook, React-Router-DOM, Random-Word-Api, Axios',
